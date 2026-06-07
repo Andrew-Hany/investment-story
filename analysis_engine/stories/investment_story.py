@@ -1,0 +1,1 @@
+"""Single-investment story assembly."""
