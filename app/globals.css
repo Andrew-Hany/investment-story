@@ -1,26 +1,290 @@
 @import "tailwindcss";
 
+/* Configure Tailwind v4 to use class-based dark mode instead of media queries */
+@variant dark (&:where(.dark, .dark *));
+
+/* ─── Light mode tokens ─── */
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #0f172a;
+
+  --color-surface:       #ffffff;
+  --color-surface-2:     #f8fafc;    /* slate-50 */
+  --color-surface-3:     #f1f5f9;    /* slate-100 */
+  --color-border:        rgba(15, 23, 42, 0.08);
+  --color-border-strong: rgba(15, 23, 42, 0.14);
+
+  --color-text-primary:  #0f172a;    /* slate-900 */
+  --color-text-secondary:#475569;    /* slate-600 */
+  --color-text-muted:    #94a3b8;    /* slate-400 */
+
+  --color-glass-border:  rgba(15, 23, 42, 0.08);
+  --color-glass-bg:      rgba(255, 255, 255, 0.7);
 }
 
-@theme inline {
+/* ─── Dark mode tokens ─── */
+html.dark {
+  --background: #0b0f1a;
+  --foreground: #e2e8f0;             /* slate-200 */
+
+  --color-surface:       #111827;    /* gray-900 */
+  --color-surface-2:     #1e2433;    /* slightly lighter */
+  --color-surface-3:     #252d3d;    /* hover/active surface */
+  --color-border:        rgba(255, 255, 255, 0.07);
+  --color-border-strong: rgba(255, 255, 255, 0.12);
+
+  --color-text-primary:  #f1f5f9;    /* slate-100 */
+  --color-text-secondary:#94a3b8;    /* slate-400 */
+  --color-text-muted:    #64748b;    /* slate-500 */
+
+  --color-glass-border:  rgba(255, 255, 255, 0.08);
+  --color-glass-bg:      rgba(17, 24, 39, 0.8);
+}
+
+@theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-geist-sans), Inter, system-ui, -apple-system, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  /* Brand Colors (unchanged in both modes) */
+  --color-brand-primary:        #4f46e5;   /* Indigo 600 */
+  --color-brand-primary-hover:  #4338ca;   /* Indigo 700 */
+  --color-brand-secondary:      #10b981;   /* Emerald 500 */
+  --color-brand-secondary-light:#ecfdf5;   /* Emerald 50  */
+  --color-brand-accent:         #8b5cf6;   /* Violet 500  */
+  --color-brand-accent-light:   #f5f3ff;   /* Violet 50   */
+  --color-brand-danger:         #f43f5e;   /* Rose 500    */
+  --color-brand-danger-light:   #fff1f2;   /* Rose 50     */
+
+  --color-glass-border: var(--color-glass-border);
+  --color-glass-bg:     var(--color-glass-bg);
+
+  --shadow-premium:       0 10px 30px -10px rgba(79, 70, 229, 0.12), 0 1px 3px rgba(15, 23, 42, 0.06);
+  --shadow-premium-hover: 0 20px 40px -15px rgba(79, 70, 229, 0.18), 0 1px 5px rgba(15, 23, 42, 0.09);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* ─── Base ─── */
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* ─── Dark mode: global overrides for Tailwind utility classes ─── */
+
+/* Surfaces */
+html.dark .bg-white          { background-color: var(--color-surface)  ; }
+html.dark .bg-white\/80      { background-color: rgba(17,24,39,0.85)   ; }
+html.dark .bg-slate-50       { background-color: var(--color-surface-2) ; }
+html.dark .bg-slate-50\/50   { background-color: var(--color-surface-2) ; }
+html.dark .bg-slate-100      { background-color: var(--color-surface-3) ; }
+html.dark .bg-slate-200      { background-color: #2d3748               ; }
+html.dark .bg-slate-950\/95  { background-color: rgba(2,6,23,0.97)     ; }
+
+/* Light tinted surfaces — all alpha variants */
+html.dark .bg-indigo-50,
+html.dark .bg-indigo-50\/40,
+html.dark .bg-indigo-50\/50,
+html.dark .bg-indigo-50\/60    { background-color: rgba(79,70,229,0.12)   ; }
+html.dark .bg-blue-50,
+html.dark .bg-blue-50\/30,
+html.dark .bg-blue-50\/40,
+html.dark .bg-blue-50\/50      { background-color: rgba(59,130,246,0.12)  ; }
+html.dark .bg-purple-50,
+html.dark .bg-purple-50\/30,
+html.dark .bg-purple-50\/40,
+html.dark .bg-purple-50\/50    { background-color: rgba(124,58,237,0.12)  ; }
+html.dark .bg-emerald-50,
+html.dark .bg-emerald-50\/40,
+html.dark .bg-emerald-50\/50   { background-color: rgba(16,185,129,0.12)  ; }
+html.dark .bg-rose-50,
+html.dark .bg-rose-50\/40,
+html.dark .bg-rose-50\/50      { background-color: rgba(244,63,94,0.12)   ; }
+html.dark .bg-amber-50,
+html.dark .bg-amber-50\/40,
+html.dark .bg-amber-50\/50     { background-color: rgba(245,158,11,0.12)  ; }
+html.dark .bg-green-50,
+html.dark .bg-green-50\/50     { background-color: rgba(34,197,94,0.12)   ; }
+html.dark .bg-red-50,
+html.dark .bg-red-50\/50       { background-color: rgba(239,68,68,0.12)   ; }
+html.dark .bg-slate-50\/40     { background-color: var(--color-surface-2)  ; }
+
+/* Gradient surfaces */
+html.dark .bg-gradient-to-br.from-indigo-50\/60 { background: linear-gradient(135deg, rgba(79,70,229,0.12), var(--color-surface)) !important; }
+html.dark .bg-gradient-to-br.from-white         { background: linear-gradient(135deg, var(--color-surface-2), var(--color-surface)) !important; }
+
+/* Borders — all alpha variants */
+html.dark .border-slate-100  { border-color: var(--color-border)       !important; }
+html.dark .border-slate-200  { border-color: var(--color-border-strong) !important; }
+html.dark .border-slate-800  { border-color: rgba(255,255,255,0.15)    !important; }
+html.dark .border-indigo-100,
+html.dark .border-indigo-100\/50,
+html.dark .border-indigo-100\/30 { border-color: rgba(99,102,241,0.25) !important; }
+html.dark .border-indigo-200 { border-color: rgba(99,102,241,0.3)      !important; }
+html.dark .border-blue-200   { border-color: rgba(59,130,246,0.3)     !important; }
+html.dark .border-purple-200 { border-color: rgba(167,139,250,0.3)    !important; }
+html.dark .border-emerald-200{ border-color: rgba(52,211,153,0.3)     !important; }
+html.dark .border-rose-200   { border-color: rgba(251,113,133,0.3)    !important; }
+html.dark .border-amber-200  { border-color: rgba(251,191,36,0.3)     !important; }
+html.dark .border-blue-100,
+html.dark .border-blue-100\/50   { border-color: rgba(96,165,250,0.2)  !important; }
+html.dark .border-purple-100,
+html.dark .border-purple-100\/50 { border-color: rgba(167,139,250,0.2) !important; }
+html.dark .border-emerald-100,
+html.dark .border-emerald-100\/50{ border-color: rgba(52,211,153,0.2)  !important; }
+html.dark .border-rose-100,
+html.dark .border-rose-100\/50   { border-color: rgba(251,113,133,0.2) !important; }
+html.dark .border-amber-100,
+html.dark .border-amber-100\/50  { border-color: rgba(251,191,36,0.2)  !important; }
+html.dark .border-slate-50   { border-color: var(--color-border)       !important; }
+html.dark .border-glass-border { border-color: var(--color-border)     !important; }
+
+/* Badge chip backgrounds (bg-*-100 used in labels, badges, story connector) */
+html.dark .bg-blue-100    { background-color: rgba(59,130,246,0.18)  ; }
+html.dark .bg-purple-100  { background-color: rgba(124,58,237,0.18)  ; }
+html.dark .bg-emerald-100 { background-color: rgba(16,185,129,0.18)  ; }
+html.dark .bg-rose-100    { background-color: rgba(244,63,94,0.18)   ; }
+html.dark .bg-amber-100   { background-color: rgba(245,158,11,0.18)  ; }
+html.dark .bg-indigo-100  { background-color: rgba(79,70,229,0.18)   ; }
+html.dark .bg-slate-100   { background-color: var(--color-surface-3)  ; }
+html.dark .bg-slate-900   { background-color: #080c14                 ; }
+
+/* Text */
+html.dark .text-slate-900    { color: var(--color-text-primary)   !important; }
+html.dark .text-slate-800    { color: #cbd5e1                     !important; }
+html.dark .text-slate-700    { color: #94a3b8                     !important; }
+html.dark .text-slate-600    { color: var(--color-text-secondary) !important; }
+html.dark .text-slate-500    { color: var(--color-text-muted)     !important; }
+html.dark .text-slate-400    { color: #64748b                     !important; }
+html.dark .text-slate-100    { color: #f1f5f9                     !important; }
+
+/* Badge text that sits on colored bg */
+html.dark .text-blue-600    { color: #93c5fd !important; }
+html.dark .text-blue-700    { color: #bfdbfe !important; }
+html.dark .text-purple-600  { color: #c4b5fd !important; }
+html.dark .text-purple-700  { color: #ddd6fe !important; }
+html.dark .text-emerald-600 { color: #6ee7b7 !important; }
+html.dark .text-emerald-700 { color: #34d399 !important; }
+html.dark .text-emerald-800 { color: #6ee7b7 !important; }
+html.dark .text-rose-600    { color: #fda4af !important; }
+html.dark .text-rose-700    { color: #fecdd3 !important; }
+html.dark .text-amber-600   { color: #fcd34d !important; }
+html.dark .text-amber-700   { color: #fcd34d !important; }
+html.dark .text-amber-800   { color: #fcd34d !important; }
+html.dark .text-indigo-600  { color: #818cf8 !important; }
+html.dark .text-indigo-900  { color: #e0e7ff !important; }
+html.dark .text-violet-600  { color: #a78bfa !important; }
+html.dark .text-violet-900  { color: #ede9fe !important; }
+
+/* Dark mode brand text fixes */
+html.dark .text-brand-primary { color: #818cf8 !important; }
+html.dark .text-brand-accent  { color: #a78bfa !important; }
+html.dark .text-brand-secondary { color: #34d399 !important; }
+
+/* Dividers */
+html.dark .divide-slate-100 > * + * { border-color: var(--color-border) !important; }
+
+/* Inputs & selects */
+html.dark input,
+html.dark select,
+html.dark textarea {
+  background-color: var(--color-surface-2) !important;
+  border-color: var(--color-border-strong) !important;
+  color: var(--color-text-primary) !important;
+  color-scheme: dark;
+}
+html.dark input::placeholder { color: var(--color-text-muted) !important; }
+html.dark select option       { background-color: var(--color-surface); color: var(--color-text-primary); }
+
+/* ─── Grid background patterns (dark mode) ─── */
+html.dark .grid-pattern {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.012) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.012) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+html.dark .grid-pattern-fine {
+  background-image:
+    linear-gradient(to right, rgba(99, 102, 241, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(99, 102, 241, 0.03) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* ─── Micro-animations ─── */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-8px); }
+}
+.animate-float { animation: float 6s ease-in-out infinite; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeIn { animation: fadeIn 0.4s ease forwards; }
+
+.glow-gradient {
+  background: radial-gradient(circle at 50% 50%, rgba(79, 70, 229, 0.06) 0%, transparent 60%);
+}
+
+.text-gradient {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ─── Dark: smooth transition on card elements ─── */
+html.dark * {
+  transition: background-color 0.25s ease, border-color 0.25s ease, color 0.2s ease;
+}
+
+/* ─── Dark: footer stays dark but slightly adjusted ─── */
+html.dark footer.bg-slate-900 {
+  background-color: #080c14 !important;
+}
+
+/* ─── Dark: header backdrop ─── */
+html.dark header {
+  background-color: rgba(11, 15, 26, 0.85) !important;
+  border-color: rgba(255, 255, 255, 0.07) !important;
+}
+
+/* ─── Dark: chart tooltip dark pill ─── */
+html.dark .bg-slate-950\/95 {
+  background-color: rgba(2, 6, 23, 0.97) !important;
+}
+
+/* ─── Dark: SVG grid/chart areas ─── */
+html.dark svg rect.chart-bg,
+html.dark svg .chart-bg {
+  fill: var(--color-surface-2);
+}
+
+/* ─── Dark: "Start Exploring" CTA button ─── */
+html.dark a.bg-slate-900 {
+  background-color: #4f46e5 !important;
+}
+html.dark a.bg-slate-900:hover {
+  background-color: #4338ca !important;
+}
+
+/* ─── Dark: Compare button ─── */
+html.dark button.bg-brand-primary { /* already uses brand color - fine */ }
+
+/* ─── Dark: winner badge on winner split panel ─── */
+html.dark .bg-brand-primary.text-white { background-color: #4f46e5 ; }
+
+/* ─── Dark: story connector cards ─── */
+html.dark .shadow-premium {
+  --shadow-premium: 0 10px 30px -10px rgba(79,70,229,0.25), 0 1px 3px rgba(0,0,0,0.4);
+}
+html.dark .shadow-sm {
+  box-shadow: 0 1px 4px rgba(0,0,0,0.4) !important;
+}
+html.dark .shadow-md {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5) !important;
 }
