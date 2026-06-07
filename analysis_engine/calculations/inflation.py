@@ -1,0 +1,1 @@
+"""Inflation-adjusted return calculations."""
