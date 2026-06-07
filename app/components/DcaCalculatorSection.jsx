@@ -128,8 +128,8 @@ export default function DcaCalculatorSection() {
         
         {/* SECTION HEADER */}
         <div className="text-center sm:text-left mb-10">
-          <span className="inline-flex items-center gap-1.5 rounded-full bg-blue-50 dark:bg-blue-950/40 px-3 py-1 text-xs font-semibold text-brand-primary dark:text-blue-400 font-mono uppercase tracking-wider">
-            🔄 Auto Investing
+          <span className="text-xs sm:text-sm font-semibold tracking-wider text-brand-primary uppercase font-mono">
+            Auto Investing
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight mt-3">
             DCA Compounding Calculator
@@ -247,7 +247,7 @@ export default function DcaCalculatorSection() {
           <div className="lg:col-span-8 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-5 sm:p-6 shadow-premium relative min-h-[300px] flex flex-col justify-between">
             {loading ? (
               <div className="flex-grow flex flex-col items-center justify-center p-12 text-slate-400 animate-pulse text-xs font-semibold">
-                🔄 Simulation calculating...
+                Simulation calculating...
               </div>
             ) : error ? (
               <div className="flex-grow flex items-center justify-center p-12 text-rose-500 text-xs font-bold text-center">

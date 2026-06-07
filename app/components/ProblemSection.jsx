@@ -71,7 +71,7 @@ export default function ProblemSection() {
           <span className="text-sm font-semibold tracking-wider text-brand-primary uppercase">
             Visualizing the journey
           </span>
-          <h2 className="hidden sm:block mt-2 text-4xl font-extrabold text-slate-900 dark:text-white sm:text-5xl tracking-tight">
+          <h2 className="mt-2 text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-white sm:text-5xl tracking-tight leading-tight">
             One graph does not explain an investment.
           </h2>
           <p className="hidden sm:block mt-4 text-lg text-slate-600 dark:text-slate-300">
