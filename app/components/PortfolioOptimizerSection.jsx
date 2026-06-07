@@ -164,42 +164,29 @@ export default function PortfolioOptimizerSection() {
   }, [optimizationResult, hoverIdx]);
 
   return (
-    <section id="portfolio-optimizer" className="py-24 bg-white dark:bg-slate-950 relative overflow-hidden border-y border-slate-100 dark:border-slate-800">
+    <section id="portfolio-optimizer" className="py-12 sm:py-20 lg:py-24 bg-white dark:bg-slate-950 relative overflow-hidden border-y border-slate-100 dark:border-slate-800">
       {/* Background radial glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 h-[600px] w-[600px] rounded-full bg-gradient-to-tr from-violet-50/50 to-indigo-50/50 blur-3xl opacity-80" />
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         
         {/* SECTION HEADER */}
-        <div className="text-left mb-10">
+        <div className="text-left mb-7 sm:mb-10">
           <span className="text-xs sm:text-sm font-semibold tracking-wider text-brand-primary uppercase font-mono">
             Asset Allocation
           </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight mt-3">
+          <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight mt-2 sm:mt-3 leading-tight">
             Portfolio Optimization Lab
           </h2>
-          <p className="mt-3 max-w-2xl text-base text-slate-500 dark:text-slate-400">
+          <p className="mt-3 max-w-2xl text-sm sm:text-base text-slate-500 dark:text-slate-400 leading-relaxed">
             Compare allocation strategies. Choose between Low Risk, Balanced, and Aggressive profiles to see how a Coordinate Descent optimizer distributes assets.
           </p>
-
-          {/* 3 Small Highlight Cards (Phones only) */}
-          <div className="grid grid-cols-3 gap-2 mt-4 sm:hidden">
-            <div className="bg-blue-50 dark:bg-blue-950/30 border border-blue-100/70 dark:border-blue-900/30 rounded-xl p-2 text-center shadow-sm flex flex-col justify-center min-h-[50px]">
-              <span className="text-[10px] font-bold text-blue-700 dark:text-blue-300">Optimal Sharpe</span>
-            </div>
-            <div className="bg-blue-50 dark:bg-blue-950/30 border border-blue-100/70 dark:border-blue-900/30 rounded-xl p-2 text-center shadow-sm flex flex-col justify-center min-h-[50px]">
-              <span className="text-[10px] font-bold text-blue-700 dark:text-blue-300">Variance Solver</span>
-            </div>
-            <div className="bg-blue-50 dark:bg-blue-950/30 border border-blue-100/70 dark:border-blue-900/30 rounded-xl p-2 text-center shadow-sm flex flex-col justify-center min-h-[50px]">
-              <span className="text-[10px] font-bold text-blue-700 dark:text-blue-300">Auto Weights</span>
-            </div>
-          </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start">
           
           {/* Controls Panel (4 cols) */}
-          <div className="lg:col-span-4 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-5 sm:p-6 shadow-premium space-y-5">
+          <div className="lg:col-span-4 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-4 sm:p-6 shadow-premium space-y-4 sm:space-y-5">
             
             {/* Goal Target Tabs */}
             <div>
@@ -213,7 +200,7 @@ export default function PortfolioOptimizerSection() {
                   <button
                     key={tab.id}
                     onClick={() => setOptGoal(tab.id)}
-                    className={`h-9 rounded-lg text-xs font-bold transition-all ${
+                    className={`h-8 sm:h-9 rounded-lg text-[11px] sm:text-xs font-bold transition-all ${
                       optGoal === tab.id
                         ? "bg-white dark:bg-slate-800 text-slate-900 dark:text-white shadow-sm"
                         : "text-slate-500 hover:text-slate-700"
@@ -233,7 +220,7 @@ export default function PortfolioOptimizerSection() {
                   type="number"
                   value={monthlyDeposit}
                   onChange={(e) => setMonthlyDeposit(Math.max(10, Number(e.target.value)))}
-                  className="flex-grow h-11 border border-slate-200 dark:border-slate-800 rounded-xl px-3 text-sm font-mono font-bold focus:border-brand-primary focus:outline-none bg-white dark:bg-slate-900"
+                  className="flex-grow h-10 sm:h-11 border border-slate-200 dark:border-slate-800 rounded-xl px-3 text-sm font-mono font-bold focus:border-brand-primary focus:outline-none bg-white dark:bg-slate-900"
                 />
               </div>
               <input
@@ -247,13 +234,13 @@ export default function PortfolioOptimizerSection() {
               />
             </div>
 
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 gap-3 sm:gap-4">
               <div>
                 <label className="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-2 font-mono">Currency</label>
                 <select
                   value={currency}
                   onChange={(e) => setCurrency(e.target.value)}
-                  className="w-full h-11 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 rounded-xl px-3 text-sm font-bold focus:border-brand-primary focus:outline-none"
+                  className="w-full h-10 sm:h-11 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 rounded-xl px-3 text-sm font-bold focus:border-brand-primary focus:outline-none"
                 >
                   <option value="USD">USD ($)</option>
                   <option value="EUR">EUR (€)</option>
@@ -268,7 +255,7 @@ export default function PortfolioOptimizerSection() {
                 <select
                   value={years}
                   onChange={(e) => setYears(Number(e.target.value))}
-                  className="w-full h-11 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 rounded-xl px-3 text-sm font-bold focus:border-brand-primary focus:outline-none"
+                  className="w-full h-10 sm:h-11 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 rounded-xl px-3 text-sm font-bold focus:border-brand-primary focus:outline-none"
                 >
                   <option value={1}>1 Year</option>
                   <option value={3}>3 Years</option>
@@ -280,7 +267,7 @@ export default function PortfolioOptimizerSection() {
           </div>
 
           {/* Graphics Display Panel (8 cols) */}
-          <div className="lg:col-span-8 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-5 sm:p-6 shadow-premium relative min-h-[300px] flex flex-col justify-between">
+          <div className="lg:col-span-8 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-4 sm:p-6 shadow-premium relative min-h-[300px] flex flex-col justify-between">
             {loading ? (
               <div className="flex-grow flex flex-col items-center justify-center p-12 text-slate-400 animate-pulse text-xs font-semibold">
                 Optimization in progress...
@@ -291,9 +278,9 @@ export default function PortfolioOptimizerSection() {
               </div>
             ) : optimizationResult ? (
               <>
-                <div className="flex justify-between items-center border-b border-slate-100 dark:border-slate-800 pb-3 mb-6">
+                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 border-b border-slate-100 dark:border-slate-800 pb-3 mb-4 sm:mb-6">
                   <span className="text-[10px] font-bold text-slate-400 uppercase font-mono tracking-wider">Historical Portfolio Growth</span>
-                  <span className="text-xs font-mono font-bold text-slate-500">
+                  <span className="text-[10px] sm:text-xs font-mono font-bold text-slate-500">
                     Invested: {sym}{Math.round(hoveredData ? hoveredData.totalInvested : optimizationResult[optGoal].totalInvested).toLocaleString()} · Value: {sym}{Math.round(hoveredData ? (optGoal === "LOW_RISK" ? hoveredData.lowRiskWealth : optGoal === "CONTROLLED_GROWTH" ? hoveredData.balWealth : hoveredData.maxWealth) : optimizationResult[optGoal].finalWealth).toLocaleString()}
                   </span>
                 </div>
@@ -305,9 +292,9 @@ export default function PortfolioOptimizerSection() {
                     handleMouseMove(e, rect);
                   }}
                   onMouseLeave={() => setHoverIdx(null)}
-                  className="aspect-[21/8] w-full bg-slate-50/50 dark:bg-slate-950/30 rounded-xl p-4 border border-slate-100 dark:border-slate-850 relative cursor-crosshair overflow-hidden"
+                  className="aspect-[4/3] sm:aspect-[21/8] w-full bg-slate-50/50 dark:bg-slate-950/30 rounded-xl p-3 sm:p-4 border border-slate-100 dark:border-slate-850 relative cursor-crosshair overflow-hidden"
                 >
-                  <svg className="w-full h-full overflow-visible min-h-[200px]" viewBox="0 0 800 240" preserveAspectRatio="none">
+                  <svg className="w-full h-full overflow-visible" viewBox="0 0 800 240" preserveAspectRatio="none">
                     <defs>
                       <linearGradient id="gradLow" x1="0" y1="0" x2="0" y2="1">
                         <stop offset="0%" stopColor="#10b981" stopOpacity="0.15"/>
@@ -465,8 +452,13 @@ export default function PortfolioOptimizerSection() {
                 </div>
 
                 {/* Beginner friendly summary */}
-                <div className="mt-4 p-4 bg-emerald-50 dark:bg-emerald-950/20 border border-emerald-100 dark:border-emerald-900/30 rounded-xl text-xs font-semibold text-emerald-800 dark:text-emerald-300">
-                  💡 A monthly deposit of {sym}{monthlyDeposit} evaluated over {years} years yields {sym}{Math.round(optimizationResult[optGoal].finalWealth).toLocaleString()} on a total investment of {sym}{Math.round(optimizationResult[optGoal].totalInvested).toLocaleString()} for the selected goal. Sharpe Ratio optimization allocates weights for a net return of +{optimizationResult[optGoal].profitPct.toFixed(1)}%.
+                <div className="mt-4 p-3 sm:p-4 bg-emerald-50 dark:bg-emerald-950/20 border border-emerald-100 dark:border-emerald-900/30 rounded-xl text-[11px] sm:text-xs font-semibold text-emerald-800 dark:text-emerald-300 leading-relaxed">
+                  <span className="sm:hidden">
+                    {sym}{monthlyDeposit}/month reaches {sym}{Math.round(optimizationResult[optGoal].finalWealth).toLocaleString()}, a +{optimizationResult[optGoal].profitPct.toFixed(1)}% net return.
+                  </span>
+                  <span className="hidden sm:inline">
+                    A monthly deposit of {sym}{monthlyDeposit} evaluated over {years} years yields {sym}{Math.round(optimizationResult[optGoal].finalWealth).toLocaleString()} on a total investment of {sym}{Math.round(optimizationResult[optGoal].totalInvested).toLocaleString()} for the selected goal. Sharpe Ratio optimization allocates weights for a net return of +{optimizationResult[optGoal].profitPct.toFixed(1)}%.
+                  </span>
                 </div>
               </>
             ) : null}
@@ -476,7 +468,7 @@ export default function PortfolioOptimizerSection() {
 
         {/* Interactive Weight Allocation Slider */}
         {optimizationResult && optimizationResult[optGoal] && (
-          <div className="mt-6 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-5 sm:p-6 shadow-premium">
+          <div className="mt-6 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-4 sm:p-6 shadow-premium">
             <span className="text-[10px] font-bold text-slate-400 uppercase font-mono tracking-wider block mb-3">
               Allocation Split — {optGoal === "LOW_RISK" ? "Low Risk" : optGoal === "CONTROLLED_GROWTH" ? "Balanced" : "Max Return"}
             </span>
