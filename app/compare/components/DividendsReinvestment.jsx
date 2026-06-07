@@ -33,10 +33,10 @@ export default function DividendsReinvestment({ result, currency }) {
       setLoading(true);
       try {
         const [resA, resB, fxData] = await Promise.all([
-          fetch(`/data/prices/${tickerA.toUpperCase()}.json`).then(r => r.ok ? r.json() : null),
-          fetch(`/data/prices/${tickerB.toUpperCase()}.json`).then(r => r.ok ? r.json() : null),
+          fetch(`/investment-story/data/prices/${tickerA.toUpperCase()}.json`).then(r => r.ok ? r.json() : null),
+          fetch(`/investment-story/data/prices/${tickerB.toUpperCase()}.json`).then(r => r.ok ? r.json() : null),
           currency !== "USD" 
-            ? fetch(`/data/fx/USD_${currency}.json`).then(r => r.ok ? r.json() : null)
+            ? fetch(`/investment-story/data/fx/USD_${currency}.json`).then(r => r.ok ? r.json() : null)
             : null
         ]);
 

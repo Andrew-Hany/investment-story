@@ -111,7 +111,7 @@ export default function ComparePage() {
       const loadFxRates = async (fromCurrency, toCurrency) => {
         if (fromCurrency === toCurrency) return [];
         try {
-          const fxData = await fetch(`/data/fx/${fromCurrency}_${toCurrency}.json`).then(r => r.ok ? r.json() : null);
+          const fxData = await fetch(`/investment-story/data/fx/${fromCurrency}_${toCurrency}.json`).then(r => r.ok ? r.json() : null);
           if (fxData && fxData.rates) {
             return fxData.rates;
           }
