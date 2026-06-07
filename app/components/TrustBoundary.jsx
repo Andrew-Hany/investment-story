@@ -69,7 +69,7 @@ export default function TrustBoundary() {
   return (
     <section id="trust" className="py-24 bg-slate-50 dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800 dark:border-slate-800 grid-pattern-fine text-left">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        
+
         {/* Header */}
         <div className="max-w-3xl mb-12">
           <span className="text-sm font-semibold tracking-wider text-brand-primary uppercase font-mono">
@@ -95,11 +95,10 @@ export default function TrustBoundary() {
                 <button
                   onClick={() => setActiveCase("expat")}
                   onMouseEnter={() => setActiveCase("expat")}
-                  className={`w-full p-4 rounded-xl border text-left transition-all duration-300 ${
-                    activeCase === "expat"
+                  className={`w-full p-4 rounded-xl border text-left transition-all duration-300 ${activeCase === "expat"
                       ? "scale-[1.02] border-brand-primary bg-indigo-50/30 dark:bg-indigo-900/20 shadow-md"
                       : "border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 hover:scale-[1.02] hover:shadow-md hover:border-slate-300 dark:hover:border-slate-500"
-                  }`}
+                    }`}
                 >
                   <span className="text-xs font-bold text-slate-400 block font-mono group-hover:text-slate-300">CASE STUDY 01</span>
                   <span className="text-sm font-bold text-slate-900 dark:text-white mt-1 block">EUR Expat vs USD Assets</span>
@@ -108,11 +107,10 @@ export default function TrustBoundary() {
                 <button
                   onClick={() => setActiveCase("gold")}
                   onMouseEnter={() => setActiveCase("gold")}
-                  className={`w-full p-4 rounded-xl border text-left transition-all duration-300 ${
-                    activeCase === "gold"
+                  className={`w-full p-4 rounded-xl border text-left transition-all duration-300 ${activeCase === "gold"
                       ? "scale-[1.02] border-brand-primary bg-indigo-50/30 dark:bg-indigo-900/20 shadow-md"
                       : "border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 hover:scale-[1.02] hover:shadow-md hover:border-slate-300 dark:hover:border-slate-500"
-                  }`}
+                    }`}
                 >
                   <span className="text-xs font-bold text-slate-400 block font-mono group-hover:text-slate-300">CASE STUDY 02</span>
                   <span className="text-sm font-bold text-slate-900 dark:text-white mt-1 block">Gold vs Cash Savings</span>
@@ -137,7 +135,7 @@ export default function TrustBoundary() {
 
               {/* Graphical Yield Bars */}
               <div className="mt-8 space-y-5">
-                
+
                 {/* Asset A */}
                 <div className="space-y-1.5">
                   <div className="flex justify-between text-xs font-bold font-mono">
@@ -145,9 +143,9 @@ export default function TrustBoundary() {
                     <span className="text-slate-800 dark:text-slate-200">{currentCase.assetA.value} ({currentCase.assetA.yield})</span>
                   </div>
                   <div className="w-full bg-slate-100 dark:bg-slate-800 h-6 rounded-lg overflow-hidden flex items-center pr-2">
-                    <div 
-                      className="bg-slate-400 h-full rounded-lg transition-all duration-500 ease-out" 
-                      style={{ width: currentCase.assetA.barWidth }} 
+                    <div
+                      className="bg-slate-400 h-full rounded-lg transition-all duration-500 ease-out"
+                      style={{ width: currentCase.assetA.barWidth }}
                     />
                   </div>
                   {/* Dynamic metrics mapping */}
@@ -165,9 +163,9 @@ export default function TrustBoundary() {
                     <span className="text-brand-secondary">{currentCase.assetB.value} ({currentCase.assetB.yield})</span>
                   </div>
                   <div className="w-full bg-slate-100 dark:bg-slate-800 h-6 rounded-lg overflow-hidden flex items-center pr-2">
-                    <div 
-                      className="bg-brand-primary h-full rounded-lg transition-all duration-500 ease-out" 
-                      style={{ width: currentCase.assetB.barWidth }} 
+                    <div
+                      className="bg-brand-primary h-full rounded-lg transition-all duration-500 ease-out"
+                      style={{ width: currentCase.assetB.barWidth }}
                     />
                   </div>
                   {/* Dynamic metrics mapping */}
