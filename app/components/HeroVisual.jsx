@@ -49,9 +49,19 @@ export default function HeroVisual() {
   ];
 
   return (
-    <div className="relative w-full rounded-2xl border border-glass-border bg-white dark:bg-slate-900 p-6 shadow-premium transition-all duration-300 hover:shadow-premium-hover grid-pattern-fine">
-      {/* Visual Header / Scenario */}
-      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b border-glass-border pb-4 mb-6 gap-2 text-left">
+    <div className="w-full">
+      <div className="mb-4 text-left lg:hidden">
+        <span className="text-xs font-semibold tracking-wider text-brand-primary uppercase font-mono">
+          Comparison Preview
+        </span>
+        <h2 className="mt-1 text-2xl font-extrabold leading-tight text-slate-900 dark:text-white">
+          See one investment story side by side.
+        </h2>
+      </div>
+
+      <div className="relative w-full rounded-2xl border border-glass-border bg-white dark:bg-slate-900 p-6 shadow-premium transition-all duration-300 hover:shadow-premium-hover grid-pattern-fine">
+        {/* Visual Header / Scenario */}
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b border-glass-border pb-4 mb-6 gap-2 text-left">
         <div>
           <span className="inline-flex items-center gap-1.5 rounded-full bg-indigo-50 dark:bg-indigo-900/30 px-2.5 py-0.5 text-xs font-semibold text-brand-primary">
             Comparison Lab
@@ -179,6 +189,7 @@ export default function HeroVisual() {
           </div>
         </div>
 
+        </div>
       </div>
     </div>
   );
