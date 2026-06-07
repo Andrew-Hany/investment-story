@@ -45,10 +45,10 @@ export default function MultiSegmentSlider({ selectedTickers, customWeights }) {
   }
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-2 sm:space-y-4">
       {/* Visual Track */}
       <div
-        className="w-full h-8 relative rounded-xl bg-slate-200 dark:bg-slate-800 flex items-center shadow-inner select-none overflow-hidden"
+        className="w-full h-6 sm:h-8 relative rounded-xl bg-slate-200 dark:bg-slate-800 flex items-center shadow-inner select-none overflow-hidden"
       >
         {/* Colorful segments */}
         {orderedTickers.map((ticker, idx) => {
@@ -71,7 +71,7 @@ export default function MultiSegmentSlider({ selectedTickers, customWeights }) {
                 width: `${weight}%`,
                 backgroundColor: color,
               }}
-              className="absolute top-0 bottom-0 first:rounded-l-xl last:rounded-r-xl transition-all duration-75 flex items-center justify-center text-[10px] font-bold text-white tracking-wide shadow-sm truncate px-1"
+              className="absolute top-0 bottom-0 first:rounded-l-xl last:rounded-r-xl transition-all duration-75 flex items-center justify-center text-[9px] sm:text-[10px] font-bold text-white tracking-wide shadow-sm truncate px-1"
             >
               {weight >= 8 && `${ticker} ${weight}%`}
             </div>
@@ -81,18 +81,18 @@ export default function MultiSegmentSlider({ selectedTickers, customWeights }) {
       </div>
 
       {/* Legend & Details */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-2 border-t border-slate-100 dark:border-slate-800/60 mt-4">
+      <div className="grid grid-cols-3 sm:grid-cols-4 gap-2 sm:gap-4 pt-2 border-t border-slate-100 dark:border-slate-800/60 mt-2 sm:mt-4">
         {orderedTickers.map((ticker) => {
           const weight = customWeights[ticker] || 0;
           const color = getColorForTicker(ticker);
           return (
-            <div key={ticker} className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-50/50 dark:bg-slate-950/20 border border-slate-100 dark:border-slate-800/40">
+            <div key={ticker} className="flex items-center gap-1.5 sm:gap-2 px-2 sm:px-3 py-1.5 rounded-lg bg-slate-50/50 dark:bg-slate-950/20 border border-slate-100 dark:border-slate-800/40">
               <div 
                 style={{ backgroundColor: color }} 
-                className="w-2.5 h-2.5 rounded-full" 
+                className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full" 
               />
-              <span className="text-xs font-bold text-slate-700 dark:text-slate-300 font-mono">{ticker}</span>
-              <span className="text-xs font-bold text-brand-primary font-mono ml-auto">{weight}%</span>
+              <span className="text-[10px] sm:text-xs font-bold text-slate-700 dark:text-slate-300 font-mono">{ticker}</span>
+              <span className="text-[10px] sm:text-xs font-bold text-brand-primary font-mono ml-auto">{weight}%</span>
             </div>
           );
         })}

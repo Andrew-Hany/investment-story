@@ -292,7 +292,7 @@ export default function PortfolioOptimizerSection() {
                     handleMouseMove(e, rect);
                   }}
                   onMouseLeave={() => setHoverIdx(null)}
-                  className="aspect-[4/3] sm:aspect-[21/8] w-full bg-slate-50/50 dark:bg-slate-950/30 rounded-xl p-3 sm:p-4 border border-slate-100 dark:border-slate-850 relative cursor-crosshair overflow-hidden"
+                  className="aspect-[16/9] sm:aspect-[21/8] w-full bg-slate-50/50 dark:bg-slate-950/30 rounded-xl p-3 sm:p-4 border border-slate-100 dark:border-slate-850 relative cursor-crosshair overflow-hidden"
                 >
                   <svg className="w-full h-full overflow-visible" viewBox="0 0 800 240" preserveAspectRatio="none">
                     <defs>
@@ -451,6 +451,16 @@ export default function PortfolioOptimizerSection() {
                   )}
                 </div>
 
+                <div className="sm:hidden mt-4 rounded-xl border border-slate-100 bg-slate-50/60 p-3 dark:border-slate-800 dark:bg-slate-950/20">
+                  <span className="text-[10px] font-bold text-slate-400 uppercase font-mono tracking-wider block mb-2">
+                    Allocation Split — {optGoal === "LOW_RISK" ? "Low Risk" : optGoal === "CONTROLLED_GROWTH" ? "Balanced" : "Max Return"}
+                  </span>
+                  <MultiSegmentSlider
+                    selectedTickers={SELECTED_TICKERS}
+                    customWeights={allocationWeights}
+                  />
+                </div>
+
                 {/* Beginner friendly summary */}
                 <div className="mt-4 p-3 sm:p-4 bg-emerald-50 dark:bg-emerald-950/20 border border-emerald-100 dark:border-emerald-900/30 rounded-xl text-[11px] sm:text-xs font-semibold text-emerald-800 dark:text-emerald-300 leading-relaxed">
                   <span className="sm:hidden">
@@ -468,7 +478,7 @@ export default function PortfolioOptimizerSection() {
 
         {/* Interactive Weight Allocation Slider */}
         {optimizationResult && optimizationResult[optGoal] && (
-          <div className="mt-6 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-4 sm:p-6 shadow-premium">
+          <div className="hidden sm:block mt-6 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-4 sm:p-6 shadow-premium">
             <span className="text-[10px] font-bold text-slate-400 uppercase font-mono tracking-wider block mb-3">
               Allocation Split — {optGoal === "LOW_RISK" ? "Low Risk" : optGoal === "CONTROLLED_GROWTH" ? "Balanced" : "Max Return"}
             </span>
