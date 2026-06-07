@@ -120,48 +120,48 @@ export default function DcaCalculatorSection() {
   const hoveredData = dcaResult && hoverIdx !== null ? dcaResult.timeline[hoverIdx] : null;
 
   return (
-    <section id="dca-calculator" className="py-24 bg-slate-50 dark:bg-slate-900/40 relative overflow-hidden border-y border-slate-100 dark:border-slate-800">
+    <section id="dca-calculator" className="py-12 sm:py-20 lg:py-24 bg-slate-50 dark:bg-slate-900/40 relative overflow-hidden border-y border-slate-100 dark:border-slate-800">
       {/* Background radial glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 h-[600px] w-[600px] rounded-full bg-gradient-to-tr from-blue-50/50 to-indigo-50/50 blur-3xl opacity-80" />
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         
         {/* SECTION HEADER */}
-        <div className="text-left mb-10">
+        <div className="text-left mb-7 sm:mb-10">
           <span className="text-xs sm:text-sm font-semibold tracking-wider text-brand-primary uppercase font-mono">
             Auto Investing
           </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight mt-3">
+          <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight mt-2 sm:mt-3 leading-tight">
             DCA Compounding Calculator
           </h2>
-          <p className="mt-3 max-w-2xl text-base text-slate-500 dark:text-slate-400">
+          <p className="mt-3 max-w-2xl text-sm sm:text-base text-slate-500 dark:text-slate-400 leading-relaxed">
             Dollar Cost Averaging (DCA) builds consistent wealth. See how monthly staggered deposits perform historically across major asset classes, accounting for exchange rates.
           </p>
 
           {/* 3 Small Highlight Cards (Phones only) */}
           <div className="grid grid-cols-3 gap-2 mt-4 sm:hidden">
-            <div className="bg-blue-50 dark:bg-blue-950/30 border border-blue-100/70 dark:border-blue-900/30 rounded-xl p-2 text-center shadow-sm flex flex-col justify-center min-h-[50px]">
-              <span className="text-[10px] font-bold text-blue-700 dark:text-blue-300">Habit Building</span>
+            <div className="bg-blue-50 dark:bg-blue-950/30 border border-blue-100/70 dark:border-blue-900/30 rounded-lg p-2 text-center shadow-sm flex flex-col justify-center min-h-10">
+              <span className="text-[9px] font-bold text-blue-700 dark:text-blue-300">Habit</span>
             </div>
-            <div className="bg-blue-50 dark:bg-blue-950/30 border border-blue-100/70 dark:border-blue-900/30 rounded-xl p-2 text-center shadow-sm flex flex-col justify-center min-h-[50px]">
-              <span className="text-[10px] font-bold text-blue-700 dark:text-blue-300">Lower Risk</span>
+            <div className="bg-blue-50 dark:bg-blue-950/30 border border-blue-100/70 dark:border-blue-900/30 rounded-lg p-2 text-center shadow-sm flex flex-col justify-center min-h-10">
+              <span className="text-[9px] font-bold text-blue-700 dark:text-blue-300">Lower Risk</span>
             </div>
-            <div className="bg-blue-50 dark:bg-blue-950/30 border border-blue-100/70 dark:border-blue-900/30 rounded-xl p-2 text-center shadow-sm flex flex-col justify-center min-h-[50px]">
-              <span className="text-[10px] font-bold text-blue-700 dark:text-blue-300">No Stress</span>
+            <div className="bg-blue-50 dark:bg-blue-950/30 border border-blue-100/70 dark:border-blue-900/30 rounded-lg p-2 text-center shadow-sm flex flex-col justify-center min-h-10">
+              <span className="text-[9px] font-bold text-blue-700 dark:text-blue-300">No Stress</span>
             </div>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start">
           
           {/* Controls Panel (4 cols) */}
-          <div className="lg:col-span-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-5 sm:p-6 shadow-premium space-y-5">
+          <div className="lg:col-span-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-4 sm:p-6 shadow-premium space-y-4 sm:space-y-5">
             <div>
               <label className="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-2 font-mono">Select Asset</label>
               <select
                 value={ticker}
                 onChange={(e) => setTicker(e.target.value)}
-                className="w-full h-11 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 rounded-xl px-3 text-sm font-bold focus:border-brand-primary focus:outline-none"
+                className="w-full h-10 sm:h-11 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 rounded-xl px-3 text-sm font-bold focus:border-brand-primary focus:outline-none"
               >
                 {ASSET_OPTIONS.map((asset) => (
                   <option key={asset.ticker} value={asset.ticker}>
@@ -179,7 +179,7 @@ export default function DcaCalculatorSection() {
                   type="number"
                   value={monthlyDeposit}
                   onChange={(e) => setMonthlyDeposit(Math.max(10, Number(e.target.value)))}
-                  className="flex-grow h-11 border border-slate-200 dark:border-slate-800 rounded-xl px-3 text-sm font-mono font-bold focus:border-brand-primary focus:outline-none bg-white dark:bg-slate-900"
+                  className="flex-grow h-10 sm:h-11 border border-slate-200 dark:border-slate-800 rounded-xl px-3 text-sm font-mono font-bold focus:border-brand-primary focus:outline-none bg-white dark:bg-slate-900"
                 />
               </div>
               <input
@@ -193,13 +193,13 @@ export default function DcaCalculatorSection() {
               />
             </div>
 
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 gap-3 sm:gap-4">
               <div>
                 <label className="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-2 font-mono">Home Currency</label>
                 <select
                   value={currency}
                   onChange={(e) => setCurrency(e.target.value)}
-                  className="w-full h-11 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 rounded-xl px-3 text-sm font-bold focus:border-brand-primary focus:outline-none"
+                  className="w-full h-10 sm:h-11 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 rounded-xl px-3 text-sm font-bold focus:border-brand-primary focus:outline-none"
                 >
                   <option value="USD">USD ($)</option>
                   <option value="EUR">EUR (€)</option>
@@ -214,7 +214,7 @@ export default function DcaCalculatorSection() {
                 <select
                   value={years}
                   onChange={(e) => setYears(Number(e.target.value))}
-                  className="w-full h-11 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 rounded-xl px-3 text-sm font-bold focus:border-brand-primary focus:outline-none"
+                  className="w-full h-10 sm:h-11 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 rounded-xl px-3 text-sm font-bold focus:border-brand-primary focus:outline-none"
                 >
                   <option value={1}>1 Year</option>
                   <option value={3}>3 Years</option>
@@ -226,7 +226,7 @@ export default function DcaCalculatorSection() {
 
             {/* Simulated outcome details card */}
             {dcaResult && (
-              <div className="p-4 bg-slate-50 dark:bg-slate-800/40 rounded-xl border border-slate-100 dark:border-slate-800 font-mono text-xs space-y-2.5">
+              <div className="p-3 sm:p-4 bg-slate-50 dark:bg-slate-800/40 rounded-xl border border-slate-100 dark:border-slate-800 font-mono text-[11px] sm:text-xs space-y-2">
                 <div className="flex justify-between">
                   <span className="text-slate-400">Total Invested:</span>
                   <strong className="text-slate-850 dark:text-slate-200">{sym}{Math.round(dcaResult.totalInvested).toLocaleString()}</strong>
@@ -244,7 +244,7 @@ export default function DcaCalculatorSection() {
           </div>
 
           {/* Graphics Display Panel (8 cols) */}
-          <div className="lg:col-span-8 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-5 sm:p-6 shadow-premium relative min-h-[300px] flex flex-col justify-between">
+          <div className="lg:col-span-8 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-4 sm:p-6 shadow-premium relative min-h-[300px] flex flex-col justify-between">
             {loading ? (
               <div className="flex-grow flex flex-col items-center justify-center p-12 text-slate-400 animate-pulse text-xs font-semibold">
                 Simulation calculating...
@@ -255,9 +255,9 @@ export default function DcaCalculatorSection() {
               </div>
             ) : dcaResult ? (
               <>
-                <div className="flex justify-between items-center border-b border-slate-100 dark:border-slate-800 pb-3 mb-6">
+                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 border-b border-slate-100 dark:border-slate-800 pb-3 mb-4 sm:mb-6">
                   <span className="text-[10px] font-bold text-slate-400 uppercase font-mono tracking-wider">Historical DCA Growth Path</span>
-                  <span className="text-xs font-mono font-bold text-slate-500">
+                  <span className="text-[10px] sm:text-xs font-mono font-bold text-slate-500">
                     Invested: {sym}{Math.round(hoveredData ? hoveredData.totalInvested : dcaResult.totalInvested).toLocaleString()} · Value: {sym}{Math.round(hoveredData ? hoveredData.wealth : dcaResult.finalWealth).toLocaleString()}
                   </span>
                 </div>
@@ -269,9 +269,9 @@ export default function DcaCalculatorSection() {
                     handleMouseMove(e, rect);
                   }}
                   onMouseLeave={() => setHoverIdx(null)}
-                  className="aspect-[21/8] w-full bg-slate-50/50 dark:bg-slate-950/30 rounded-xl p-4 border border-slate-100 dark:border-slate-850 relative cursor-crosshair overflow-hidden"
+                  className="aspect-[4/3] sm:aspect-[21/8] w-full bg-slate-50/50 dark:bg-slate-950/30 rounded-xl p-3 sm:p-4 border border-slate-100 dark:border-slate-850 relative cursor-crosshair overflow-hidden"
                 >
-                  <svg className="w-full h-full overflow-visible min-h-[200px]" viewBox="0 0 800 240" preserveAspectRatio="none">
+                  <svg className="w-full h-full overflow-visible" viewBox="0 0 800 240" preserveAspectRatio="none">
                     <defs>
                       <linearGradient id="gradDcaLanding" x1="0" y1="0" x2="0" y2="1">
                         <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.15"/>
@@ -373,8 +373,13 @@ export default function DcaCalculatorSection() {
                 </div>
 
                 {/* Beginner friendly summary */}
-                <div className="mt-4 p-4 bg-emerald-50 dark:bg-emerald-950/20 border border-emerald-100 dark:border-emerald-900/30 rounded-xl text-xs font-semibold text-emerald-800 dark:text-emerald-300">
-                  💡 By allocating {sym}{monthlyDeposit} monthly to {ticker} over {years} years, you converted a total contribution of {sym}{Math.round(dcaResult.totalInvested).toLocaleString()} into a portfolio worth {sym}{Math.round(dcaResult.finalWealth).toLocaleString()}, netting a clean {sym}{Math.round(dcaResult.totalProfit).toLocaleString()} profit.
+                <div className="mt-4 p-3 sm:p-4 bg-emerald-50 dark:bg-emerald-950/20 border border-emerald-100 dark:border-emerald-900/30 rounded-xl text-[11px] sm:text-xs font-semibold text-emerald-800 dark:text-emerald-300 leading-relaxed">
+                  <span className="sm:hidden">
+                    {sym}{monthlyDeposit}/month into {ticker} became {sym}{Math.round(dcaResult.finalWealth).toLocaleString()}, a {sym}{Math.round(dcaResult.totalProfit).toLocaleString()} profit.
+                  </span>
+                  <span className="hidden sm:inline">
+                    By allocating {sym}{monthlyDeposit} monthly to {ticker} over {years} years, you converted a total contribution of {sym}{Math.round(dcaResult.totalInvested).toLocaleString()} into a portfolio worth {sym}{Math.round(dcaResult.finalWealth).toLocaleString()}, netting a clean {sym}{Math.round(dcaResult.totalProfit).toLocaleString()} profit.
+                  </span>
                 </div>
               </>
             ) : null}
