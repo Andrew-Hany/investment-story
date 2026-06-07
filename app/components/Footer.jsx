@@ -4,7 +4,7 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-900 text-slate-400 py-16 border-t border-slate-800">
+    <footer className="bg-slate-900 text-slate-400 pt-16 border-t border-slate-800">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start mb-12">
@@ -43,18 +43,13 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-slate-800 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs">
+        <div className="border-t border-slate-800 pt-8 pb-12 text-center text-xs">
           <span>&copy; {new Date().getFullYear()} Investment Story. All rights reserved.</span>
-          <div className="flex gap-6">
-            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
-            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors">Data Sources</a>
-          </div>
         </div>
 
       </div>
 
-      <div className="mt-12 border-t border-slate-800 bg-slate-950/40 px-4 py-7 text-center text-sm text-slate-500 sm:px-6 lg:px-8">
+      <div className="border-t border-slate-800 bg-slate-950/40 px-4 py-7 text-center text-sm text-slate-500 sm:px-6 lg:px-8">
         <span>Designed and developed by </span>
         <a
           href="https://www.linkedin.com/in/andrewzaki-/"
