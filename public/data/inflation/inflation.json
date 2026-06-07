@@ -1,0 +1,1446 @@
+{
+  "source": "World Bank FP.CPI.TOTL",
+  "generated_at": "2026-05-30T14:03:02.595735+00:00",
+  "base_year": 2010,
+  "start_year": 2000,
+  "requested_end_year": 2026,
+  "latest_available_year": 2024,
+  "currencies": [
+    "USD",
+    "EUR",
+    "EUR_DE",
+    "EUR_FR",
+    "EUR_IT",
+    "EUR_ES",
+    "EUR_FI",
+    "CAD",
+    "EGP",
+    "AED"
+  ],
+  "source_details": {
+    "USD": {
+      "country_code": "US",
+      "indicator": "FP.CPI.TOTL",
+      "source": "World Bank World Development Indicators",
+      "original_source": "IMF International Financial Statistics",
+      "unit": "Consumer price index, 2010 = 100",
+      "is_proxy": false,
+      "method": null,
+      "note": null,
+      "data_quality": {
+        "total_years_fetched": 25,
+        "missing_years": [
+          2025,
+          2026
+        ],
+        "has_gaps": false
+      }
+    },
+    "EUR": {
+      "country_code": "DE,FR,IT,ES,FI",
+      "indicator": "FP.CPI.TOTL",
+      "source": "World Bank World Development Indicators",
+      "original_source": "IMF International Financial Statistics",
+      "unit": "Consumer price index, 2010 = 100",
+      "is_proxy": true,
+      "method": "Averaged index of DE, FR, IT, ES, FI on overlapping years",
+      "note": "Euro Area CPI aggregate FP.CPI.TOTL is not available in World Bank API for recent years. A composite averaged CPI index of Germany, France, Italy, Spain, and Finland is used as a robust proxy.",
+      "data_quality": {
+        "total_years_fetched": 25,
+        "missing_years": [
+          2025,
+          2026
+        ],
+        "has_gaps": false
+      }
+    },
+    "EUR_DE": {
+      "country_code": "DE",
+      "indicator": "FP.CPI.TOTL",
+      "source": "World Bank World Development Indicators",
+      "original_source": "IMF International Financial Statistics",
+      "unit": "Consumer price index, 2010 = 100",
+      "is_proxy": false,
+      "method": null,
+      "note": null,
+      "data_quality": {
+        "total_years_fetched": 25,
+        "missing_years": [
+          2025,
+          2026
+        ],
+        "has_gaps": false
+      }
+    },
+    "EUR_FR": {
+      "country_code": "FR",
+      "indicator": "FP.CPI.TOTL",
+      "source": "World Bank World Development Indicators",
+      "original_source": "IMF International Financial Statistics",
+      "unit": "Consumer price index, 2010 = 100",
+      "is_proxy": false,
+      "method": null,
+      "note": null,
+      "data_quality": {
+        "total_years_fetched": 25,
+        "missing_years": [
+          2025,
+          2026
+        ],
+        "has_gaps": false
+      }
+    },
+    "EUR_IT": {
+      "country_code": "IT",
+      "indicator": "FP.CPI.TOTL",
+      "source": "World Bank World Development Indicators",
+      "original_source": "IMF International Financial Statistics",
+      "unit": "Consumer price index, 2010 = 100",
+      "is_proxy": false,
+      "method": null,
+      "note": null,
+      "data_quality": {
+        "total_years_fetched": 25,
+        "missing_years": [
+          2025,
+          2026
+        ],
+        "has_gaps": false
+      }
+    },
+    "EUR_ES": {
+      "country_code": "ES",
+      "indicator": "FP.CPI.TOTL",
+      "source": "World Bank World Development Indicators",
+      "original_source": "IMF International Financial Statistics",
+      "unit": "Consumer price index, 2010 = 100",
+      "is_proxy": false,
+      "method": null,
+      "note": null,
+      "data_quality": {
+        "total_years_fetched": 25,
+        "missing_years": [
+          2025,
+          2026
+        ],
+        "has_gaps": false
+      }
+    },
+    "EUR_FI": {
+      "country_code": "FI",
+      "indicator": "FP.CPI.TOTL",
+      "source": "World Bank World Development Indicators",
+      "original_source": "IMF International Financial Statistics",
+      "unit": "Consumer price index, 2010 = 100",
+      "is_proxy": false,
+      "method": null,
+      "note": null,
+      "data_quality": {
+        "total_years_fetched": 25,
+        "missing_years": [
+          2025,
+          2026
+        ],
+        "has_gaps": false
+      }
+    },
+    "CAD": {
+      "country_code": "CA",
+      "indicator": "FP.CPI.TOTL",
+      "source": "World Bank World Development Indicators",
+      "original_source": "IMF International Financial Statistics",
+      "unit": "Consumer price index, 2010 = 100",
+      "is_proxy": false,
+      "method": null,
+      "note": null,
+      "data_quality": {
+        "total_years_fetched": 25,
+        "missing_years": [
+          2025,
+          2026
+        ],
+        "has_gaps": false
+      }
+    },
+    "EGP": {
+      "country_code": "EG",
+      "indicator": "FP.CPI.TOTL",
+      "source": "World Bank World Development Indicators",
+      "original_source": "IMF International Financial Statistics",
+      "unit": "Consumer price index, 2010 = 100",
+      "is_proxy": false,
+      "method": null,
+      "note": null,
+      "data_quality": {
+        "total_years_fetched": 25,
+        "missing_years": [
+          2025,
+          2026
+        ],
+        "has_gaps": false
+      }
+    },
+    "AED": {
+      "country_code": "AE",
+      "indicator": "FP.CPI.TOTL",
+      "source": "World Bank World Development Indicators",
+      "original_source": "IMF International Financial Statistics",
+      "unit": "Consumer price index, 2010 = 100",
+      "is_proxy": false,
+      "method": null,
+      "note": null,
+      "data_quality": {
+        "total_years_fetched": 18,
+        "missing_years": [
+          2000,
+          2001,
+          2002,
+          2003,
+          2004,
+          2005,
+          2006,
+          2025,
+          2026
+        ],
+        "has_gaps": false
+      }
+    }
+  },
+  "inflation": {
+    "USD": [
+      {
+        "year": 2000,
+        "cpi": 78.9707,
+        "annual_rate": null
+      },
+      {
+        "year": 2001,
+        "cpi": 81.2026,
+        "annual_rate": 0.028262
+      },
+      {
+        "year": 2002,
+        "cpi": 82.4905,
+        "annual_rate": 0.01586
+      },
+      {
+        "year": 2003,
+        "cpi": 84.3631,
+        "annual_rate": 0.022701
+      },
+      {
+        "year": 2004,
+        "cpi": 86.6217,
+        "annual_rate": 0.026772
+      },
+      {
+        "year": 2005,
+        "cpi": 89.5605,
+        "annual_rate": 0.033927
+      },
+      {
+        "year": 2006,
+        "cpi": 92.4497,
+        "annual_rate": 0.03226
+      },
+      {
+        "year": 2007,
+        "cpi": 95.087,
+        "annual_rate": 0.028527
+      },
+      {
+        "year": 2008,
+        "cpi": 98.7375,
+        "annual_rate": 0.038391
+      },
+      {
+        "year": 2009,
+        "cpi": 98.3864,
+        "annual_rate": -0.003556
+      },
+      {
+        "year": 2010,
+        "cpi": 100.0,
+        "annual_rate": 0.016401
+      },
+      {
+        "year": 2011,
+        "cpi": 103.1568,
+        "annual_rate": 0.031568
+      },
+      {
+        "year": 2012,
+        "cpi": 105.2915,
+        "annual_rate": 0.020694
+      },
+      {
+        "year": 2013,
+        "cpi": 106.8338,
+        "annual_rate": 0.014648
+      },
+      {
+        "year": 2014,
+        "cpi": 108.5669,
+        "annual_rate": 0.016222
+      },
+      {
+        "year": 2015,
+        "cpi": 108.6957,
+        "annual_rate": 0.001186
+      },
+      {
+        "year": 2016,
+        "cpi": 110.067,
+        "annual_rate": 0.012616
+      },
+      {
+        "year": 2017,
+        "cpi": 112.4116,
+        "annual_rate": 0.021302
+      },
+      {
+        "year": 2018,
+        "cpi": 115.1573,
+        "annual_rate": 0.024425
+      },
+      {
+        "year": 2019,
+        "cpi": 117.2442,
+        "annual_rate": 0.018122
+      },
+      {
+        "year": 2020,
+        "cpi": 118.6905,
+        "annual_rate": 0.012336
+      },
+      {
+        "year": 2021,
+        "cpi": 124.2664,
+        "annual_rate": 0.046978
+      },
+      {
+        "year": 2022,
+        "cpi": 134.2112,
+        "annual_rate": 0.080028
+      },
+      {
+        "year": 2023,
+        "cpi": 139.7358,
+        "annual_rate": 0.041163
+      },
+      {
+        "year": 2024,
+        "cpi": 143.8573,
+        "annual_rate": 0.029495
+      }
+    ],
+    "EUR_DE": [
+      {
+        "year": 2000,
+        "cpi": 85.6988,
+        "annual_rate": null
+      },
+      {
+        "year": 2001,
+        "cpi": 87.3989,
+        "annual_rate": 0.019838
+      },
+      {
+        "year": 2002,
+        "cpi": 88.6407,
+        "annual_rate": 0.014208
+      },
+      {
+        "year": 2003,
+        "cpi": 89.5575,
+        "annual_rate": 0.010343
+      },
+      {
+        "year": 2004,
+        "cpi": 91.0493,
+        "annual_rate": 0.016657
+      },
+      {
+        "year": 2005,
+        "cpi": 92.4577,
+        "annual_rate": 0.015469
+      },
+      {
+        "year": 2006,
+        "cpi": 93.9162,
+        "annual_rate": 0.015775
+      },
+      {
+        "year": 2007,
+        "cpi": 96.0747,
+        "annual_rate": 0.022983
+      },
+      {
+        "year": 2008,
+        "cpi": 98.5999,
+        "annual_rate": 0.026284
+      },
+      {
+        "year": 2009,
+        "cpi": 98.9082,
+        "annual_rate": 0.003127
+      },
+      {
+        "year": 2010,
+        "cpi": 100.0,
+        "annual_rate": 0.011039
+      },
+      {
+        "year": 2011,
+        "cpi": 102.0752,
+        "annual_rate": 0.020752
+      },
+      {
+        "year": 2012,
+        "cpi": 104.1253,
+        "annual_rate": 0.020084
+      },
+      {
+        "year": 2013,
+        "cpi": 105.6921,
+        "annual_rate": 0.015047
+      },
+      {
+        "year": 2014,
+        "cpi": 106.6505,
+        "annual_rate": 0.009068
+      },
+      {
+        "year": 2015,
+        "cpi": 107.1992,
+        "annual_rate": 0.005145
+      },
+      {
+        "year": 2016,
+        "cpi": 107.7263,
+        "annual_rate": 0.004917
+      },
+      {
+        "year": 2017,
+        "cpi": 109.3525,
+        "annual_rate": 0.015096
+      },
+      {
+        "year": 2018,
+        "cpi": 111.2466,
+        "annual_rate": 0.017321
+      },
+      {
+        "year": 2019,
+        "cpi": 112.8549,
+        "annual_rate": 0.014457
+      },
+      {
+        "year": 2020,
+        "cpi": 113.0184,
+        "annual_rate": 0.001449
+      },
+      {
+        "year": 2021,
+        "cpi": 116.4843,
+        "annual_rate": 0.030667
+      },
+      {
+        "year": 2022,
+        "cpi": 124.4897,
+        "annual_rate": 0.068725
+      },
+      {
+        "year": 2023,
+        "cpi": 131.8924,
+        "annual_rate": 0.059464
+      },
+      {
+        "year": 2024,
+        "cpi": 134.8686,
+        "annual_rate": 0.022565
+      }
+    ],
+    "EUR_FR": [
+      {
+        "year": 2000,
+        "cpi": 84.3891,
+        "annual_rate": null
+      },
+      {
+        "year": 2001,
+        "cpi": 85.7687,
+        "annual_rate": 0.016348
+      },
+      {
+        "year": 2002,
+        "cpi": 87.4184,
+        "annual_rate": 0.019234
+      },
+      {
+        "year": 2003,
+        "cpi": 89.2528,
+        "annual_rate": 0.020984
+      },
+      {
+        "year": 2004,
+        "cpi": 91.1647,
+        "annual_rate": 0.021421
+      },
+      {
+        "year": 2005,
+        "cpi": 92.7563,
+        "annual_rate": 0.017459
+      },
+      {
+        "year": 2006,
+        "cpi": 94.3101,
+        "annual_rate": 0.016751
+      },
+      {
+        "year": 2007,
+        "cpi": 95.7135,
+        "annual_rate": 0.014881
+      },
+      {
+        "year": 2008,
+        "cpi": 98.4057,
+        "annual_rate": 0.028128
+      },
+      {
+        "year": 2009,
+        "cpi": 98.492,
+        "annual_rate": 0.000877
+      },
+      {
+        "year": 2010,
+        "cpi": 100.0,
+        "annual_rate": 0.015311
+      },
+      {
+        "year": 2011,
+        "cpi": 102.1116,
+        "annual_rate": 0.021116
+      },
+      {
+        "year": 2012,
+        "cpi": 104.1071,
+        "annual_rate": 0.019542
+      },
+      {
+        "year": 2013,
+        "cpi": 105.0062,
+        "annual_rate": 0.008636
+      },
+      {
+        "year": 2014,
+        "cpi": 105.5394,
+        "annual_rate": 0.005078
+      },
+      {
+        "year": 2015,
+        "cpi": 105.579,
+        "annual_rate": 0.000375
+      },
+      {
+        "year": 2016,
+        "cpi": 105.7726,
+        "annual_rate": 0.001834
+      },
+      {
+        "year": 2017,
+        "cpi": 106.8645,
+        "annual_rate": 0.010323
+      },
+      {
+        "year": 2018,
+        "cpi": 108.8423,
+        "annual_rate": 0.018508
+      },
+      {
+        "year": 2019,
+        "cpi": 110.0486,
+        "annual_rate": 0.011083
+      },
+      {
+        "year": 2020,
+        "cpi": 110.5729,
+        "annual_rate": 0.004764
+      },
+      {
+        "year": 2021,
+        "cpi": 112.3889,
+        "annual_rate": 0.016424
+      },
+      {
+        "year": 2022,
+        "cpi": 118.2583,
+        "annual_rate": 0.052224
+      },
+      {
+        "year": 2023,
+        "cpi": 124.0273,
+        "annual_rate": 0.048783
+      },
+      {
+        "year": 2024,
+        "cpi": 126.5067,
+        "annual_rate": 0.019991
+      }
+    ],
+    "EUR_IT": [
+      {
+        "year": 2000,
+        "cpi": 80.7108,
+        "annual_rate": null
+      },
+      {
+        "year": 2001,
+        "cpi": 82.9587,
+        "annual_rate": 0.027851
+      },
+      {
+        "year": 2002,
+        "cpi": 85.0039,
+        "annual_rate": 0.024653
+      },
+      {
+        "year": 2003,
+        "cpi": 87.2757,
+        "annual_rate": 0.026726
+      },
+      {
+        "year": 2004,
+        "cpi": 89.2016,
+        "annual_rate": 0.022067
+      },
+      {
+        "year": 2005,
+        "cpi": 90.9725,
+        "annual_rate": 0.019853
+      },
+      {
+        "year": 2006,
+        "cpi": 92.8746,
+        "annual_rate": 0.020909
+      },
+      {
+        "year": 2007,
+        "cpi": 94.574,
+        "annual_rate": 0.018298
+      },
+      {
+        "year": 2008,
+        "cpi": 97.7401,
+        "annual_rate": 0.033477
+      },
+      {
+        "year": 2009,
+        "cpi": 98.4974,
+        "annual_rate": 0.007748
+      },
+      {
+        "year": 2010,
+        "cpi": 100.0,
+        "annual_rate": 0.015255
+      },
+      {
+        "year": 2011,
+        "cpi": 102.7806,
+        "annual_rate": 0.027806
+      },
+      {
+        "year": 2012,
+        "cpi": 105.9066,
+        "annual_rate": 0.030414
+      },
+      {
+        "year": 2013,
+        "cpi": 107.1986,
+        "annual_rate": 0.012199
+      },
+      {
+        "year": 2014,
+        "cpi": 107.457,
+        "annual_rate": 0.00241
+      },
+      {
+        "year": 2015,
+        "cpi": 107.4987,
+        "annual_rate": 0.000388
+      },
+      {
+        "year": 2016,
+        "cpi": 107.3976,
+        "annual_rate": -0.00094
+      },
+      {
+        "year": 2017,
+        "cpi": 108.7149,
+        "annual_rate": 0.012266
+      },
+      {
+        "year": 2018,
+        "cpi": 109.9515,
+        "annual_rate": 0.011375
+      },
+      {
+        "year": 2019,
+        "cpi": 110.6236,
+        "annual_rate": 0.006113
+      },
+      {
+        "year": 2020,
+        "cpi": 110.4713,
+        "annual_rate": -0.001377
+      },
+      {
+        "year": 2021,
+        "cpi": 112.5413,
+        "annual_rate": 0.018738
+      },
+      {
+        "year": 2022,
+        "cpi": 121.7711,
+        "annual_rate": 0.082013
+      },
+      {
+        "year": 2023,
+        "cpi": 128.6173,
+        "annual_rate": 0.056222
+      },
+      {
+        "year": 2024,
+        "cpi": 129.8808,
+        "annual_rate": 0.009824
+      }
+    ],
+    "EUR_ES": [
+      {
+        "year": 2000,
+        "cpi": 75.9258,
+        "annual_rate": null
+      },
+      {
+        "year": 2001,
+        "cpi": 78.6514,
+        "annual_rate": 0.035898
+      },
+      {
+        "year": 2002,
+        "cpi": 81.0626,
+        "annual_rate": 0.030657
+      },
+      {
+        "year": 2003,
+        "cpi": 83.526,
+        "annual_rate": 0.030389
+      },
+      {
+        "year": 2004,
+        "cpi": 86.0645,
+        "annual_rate": 0.030392
+      },
+      {
+        "year": 2005,
+        "cpi": 88.9639,
+        "annual_rate": 0.033689
+      },
+      {
+        "year": 2006,
+        "cpi": 92.0915,
+        "annual_rate": 0.035156
+      },
+      {
+        "year": 2007,
+        "cpi": 94.6579,
+        "annual_rate": 0.027868
+      },
+      {
+        "year": 2008,
+        "cpi": 98.5155,
+        "annual_rate": 0.040753
+      },
+      {
+        "year": 2009,
+        "cpi": 98.232,
+        "annual_rate": -0.002878
+      },
+      {
+        "year": 2010,
+        "cpi": 100.0,
+        "annual_rate": 0.017998
+      },
+      {
+        "year": 2011,
+        "cpi": 103.1961,
+        "annual_rate": 0.031961
+      },
+      {
+        "year": 2012,
+        "cpi": 105.7204,
+        "annual_rate": 0.024461
+      },
+      {
+        "year": 2013,
+        "cpi": 107.2096,
+        "annual_rate": 0.014086
+      },
+      {
+        "year": 2014,
+        "cpi": 107.0476,
+        "annual_rate": -0.001511
+      },
+      {
+        "year": 2015,
+        "cpi": 106.5119,
+        "annual_rate": -0.005004
+      },
+      {
+        "year": 2016,
+        "cpi": 106.2961,
+        "annual_rate": -0.002026
+      },
+      {
+        "year": 2017,
+        "cpi": 108.3754,
+        "annual_rate": 0.019561
+      },
+      {
+        "year": 2018,
+        "cpi": 110.1906,
+        "annual_rate": 0.016749
+      },
+      {
+        "year": 2019,
+        "cpi": 110.9614,
+        "annual_rate": 0.006995
+      },
+      {
+        "year": 2020,
+        "cpi": 110.6033,
+        "annual_rate": -0.003227
+      },
+      {
+        "year": 2021,
+        "cpi": 114.0244,
+        "annual_rate": 0.030931
+      },
+      {
+        "year": 2022,
+        "cpi": 123.5917,
+        "annual_rate": 0.083906
+      },
+      {
+        "year": 2023,
+        "cpi": 127.9574,
+        "annual_rate": 0.035324
+      },
+      {
+        "year": 2024,
+        "cpi": 131.5072,
+        "annual_rate": 0.027742
+      }
+    ],
+    "EUR_FI": [
+      {
+        "year": 2000,
+        "cpi": 86.0845,
+        "annual_rate": null
+      },
+      {
+        "year": 2001,
+        "cpi": 88.3041,
+        "annual_rate": 0.025784
+      },
+      {
+        "year": 2002,
+        "cpi": 89.6916,
+        "annual_rate": 0.015713
+      },
+      {
+        "year": 2003,
+        "cpi": 90.4786,
+        "annual_rate": 0.008775
+      },
+      {
+        "year": 2004,
+        "cpi": 90.6479,
+        "annual_rate": 0.001871
+      },
+      {
+        "year": 2005,
+        "cpi": 91.2134,
+        "annual_rate": 0.006238
+      },
+      {
+        "year": 2006,
+        "cpi": 92.6424,
+        "annual_rate": 0.015667
+      },
+      {
+        "year": 2007,
+        "cpi": 94.9684,
+        "annual_rate": 0.025107
+      },
+      {
+        "year": 2008,
+        "cpi": 98.8297,
+        "annual_rate": 0.040659
+      },
+      {
+        "year": 2009,
+        "cpi": 98.8297,
+        "annual_rate": 0.0
+      },
+      {
+        "year": 2010,
+        "cpi": 100.0,
+        "annual_rate": 0.011842
+      },
+      {
+        "year": 2011,
+        "cpi": 103.4168,
+        "annual_rate": 0.034168
+      },
+      {
+        "year": 2012,
+        "cpi": 106.3211,
+        "annual_rate": 0.028083
+      },
+      {
+        "year": 2013,
+        "cpi": 107.8928,
+        "annual_rate": 0.014783
+      },
+      {
+        "year": 2014,
+        "cpi": 109.0162,
+        "annual_rate": 0.010412
+      },
+      {
+        "year": 2015,
+        "cpi": 108.7895,
+        "annual_rate": -0.00208
+      },
+      {
+        "year": 2016,
+        "cpi": 109.1776,
+        "annual_rate": 0.003567
+      },
+      {
+        "year": 2017,
+        "cpi": 110.0008,
+        "annual_rate": 0.00754
+      },
+      {
+        "year": 2018,
+        "cpi": 111.193,
+        "annual_rate": 0.010838
+      },
+      {
+        "year": 2019,
+        "cpi": 112.3317,
+        "annual_rate": 0.010241
+      },
+      {
+        "year": 2020,
+        "cpi": 112.6581,
+        "annual_rate": 0.002906
+      },
+      {
+        "year": 2021,
+        "cpi": 115.1305,
+        "annual_rate": 0.021946
+      },
+      {
+        "year": 2022,
+        "cpi": 123.3318,
+        "annual_rate": 0.071235
+      },
+      {
+        "year": 2023,
+        "cpi": 131.0408,
+        "annual_rate": 0.062506
+      },
+      {
+        "year": 2024,
+        "cpi": 133.0925,
+        "annual_rate": 0.015657
+      }
+    ],
+    "CAD": [
+      {
+        "year": 2000,
+        "cpi": 81.8904,
+        "annual_rate": null
+      },
+      {
+        "year": 2001,
+        "cpi": 83.9582,
+        "annual_rate": 0.025251
+      },
+      {
+        "year": 2002,
+        "cpi": 85.8543,
+        "annual_rate": 0.022584
+      },
+      {
+        "year": 2003,
+        "cpi": 88.2227,
+        "annual_rate": 0.027586
+      },
+      {
+        "year": 2004,
+        "cpi": 89.8612,
+        "annual_rate": 0.018572
+      },
+      {
+        "year": 2005,
+        "cpi": 91.8503,
+        "annual_rate": 0.022135
+      },
+      {
+        "year": 2006,
+        "cpi": 93.6892,
+        "annual_rate": 0.020021
+      },
+      {
+        "year": 2007,
+        "cpi": 95.6926,
+        "annual_rate": 0.021383
+      },
+      {
+        "year": 2008,
+        "cpi": 97.9608,
+        "annual_rate": 0.023703
+      },
+      {
+        "year": 2009,
+        "cpi": 98.2541,
+        "annual_rate": 0.002994
+      },
+      {
+        "year": 2010,
+        "cpi": 100.0,
+        "annual_rate": 0.017769
+      },
+      {
+        "year": 2011,
+        "cpi": 102.9121,
+        "annual_rate": 0.029121
+      },
+      {
+        "year": 2012,
+        "cpi": 104.472,
+        "annual_rate": 0.015158
+      },
+      {
+        "year": 2013,
+        "cpi": 105.4522,
+        "annual_rate": 0.009382
+      },
+      {
+        "year": 2014,
+        "cpi": 107.4628,
+        "annual_rate": 0.019066
+      },
+      {
+        "year": 2015,
+        "cpi": 108.672,
+        "annual_rate": 0.011252
+      },
+      {
+        "year": 2016,
+        "cpi": 110.2247,
+        "annual_rate": 0.014288
+      },
+      {
+        "year": 2017,
+        "cpi": 111.9848,
+        "annual_rate": 0.015968
+      },
+      {
+        "year": 2018,
+        "cpi": 114.5249,
+        "annual_rate": 0.022683
+      },
+      {
+        "year": 2019,
+        "cpi": 116.7573,
+        "annual_rate": 0.019493
+      },
+      {
+        "year": 2020,
+        "cpi": 117.5944,
+        "annual_rate": 0.00717
+      },
+      {
+        "year": 2021,
+        "cpi": 121.587,
+        "annual_rate": 0.033952
+      },
+      {
+        "year": 2022,
+        "cpi": 129.8583,
+        "annual_rate": 0.068028
+      },
+      {
+        "year": 2023,
+        "cpi": 134.8955,
+        "annual_rate": 0.03879
+      },
+      {
+        "year": 2024,
+        "cpi": 138.1082,
+        "annual_rate": 0.023816
+      }
+    ],
+    "EGP": [
+      {
+        "year": 2000,
+        "cpi": 45.0769,
+        "annual_rate": null
+      },
+      {
+        "year": 2001,
+        "cpi": 46.1,
+        "annual_rate": 0.022697
+      },
+      {
+        "year": 2002,
+        "cpi": 47.3619,
+        "annual_rate": 0.027373
+      },
+      {
+        "year": 2003,
+        "cpi": 49.4968,
+        "annual_rate": 0.045076
+      },
+      {
+        "year": 2004,
+        "cpi": 55.0754,
+        "annual_rate": 0.112706
+      },
+      {
+        "year": 2005,
+        "cpi": 57.7573,
+        "annual_rate": 0.048695
+      },
+      {
+        "year": 2006,
+        "cpi": 62.1725,
+        "annual_rate": 0.076444
+      },
+      {
+        "year": 2007,
+        "cpi": 67.9664,
+        "annual_rate": 0.093191
+      },
+      {
+        "year": 2008,
+        "cpi": 80.4157,
+        "annual_rate": 0.183168
+      },
+      {
+        "year": 2009,
+        "cpi": 89.8754,
+        "annual_rate": 0.117635
+      },
+      {
+        "year": 2010,
+        "cpi": 100.0,
+        "annual_rate": 0.112652
+      },
+      {
+        "year": 2011,
+        "cpi": 110.0649,
+        "annual_rate": 0.100649
+      },
+      {
+        "year": 2012,
+        "cpi": 117.8924,
+        "annual_rate": 0.071117
+      },
+      {
+        "year": 2013,
+        "cpi": 129.0565,
+        "annual_rate": 0.094697
+      },
+      {
+        "year": 2014,
+        "cpi": 142.0528,
+        "annual_rate": 0.100702
+      },
+      {
+        "year": 2015,
+        "cpi": 156.7844,
+        "annual_rate": 0.103705
+      },
+      {
+        "year": 2016,
+        "cpi": 178.4419,
+        "annual_rate": 0.138136
+      },
+      {
+        "year": 2017,
+        "cpi": 231.0941,
+        "annual_rate": 0.295066
+      },
+      {
+        "year": 2018,
+        "cpi": 264.3751,
+        "annual_rate": 0.144015
+      },
+      {
+        "year": 2019,
+        "cpi": 288.5728,
+        "annual_rate": 0.091528
+      },
+      {
+        "year": 2020,
+        "cpi": 303.1311,
+        "annual_rate": 0.050449
+      },
+      {
+        "year": 2021,
+        "cpi": 318.9365,
+        "annual_rate": 0.05214
+      },
+      {
+        "year": 2022,
+        "cpi": 363.2548,
+        "annual_rate": 0.138957
+      },
+      {
+        "year": 2023,
+        "cpi": 486.3429,
+        "annual_rate": 0.338848
+      },
+      {
+        "year": 2024,
+        "cpi": 623.8349,
+        "annual_rate": 0.282706
+      }
+    ],
+    "AED": [
+      {
+        "year": 2007,
+        "cpi": 86.9531,
+        "annual_rate": null
+      },
+      {
+        "year": 2008,
+        "cpi": 97.6052,
+        "annual_rate": 0.122504
+      },
+      {
+        "year": 2009,
+        "cpi": 99.1297,
+        "annual_rate": 0.015619
+      },
+      {
+        "year": 2010,
+        "cpi": 100.0,
+        "annual_rate": 0.008779
+      },
+      {
+        "year": 2011,
+        "cpi": 100.8773,
+        "annual_rate": 0.008773
+      },
+      {
+        "year": 2012,
+        "cpi": 101.5454,
+        "annual_rate": 0.006623
+      },
+      {
+        "year": 2013,
+        "cpi": 102.6636,
+        "annual_rate": 0.011012
+      },
+      {
+        "year": 2014,
+        "cpi": 105.0723,
+        "annual_rate": 0.023462
+      },
+      {
+        "year": 2015,
+        "cpi": 109.3487,
+        "annual_rate": 0.0407
+      },
+      {
+        "year": 2016,
+        "cpi": 111.1174,
+        "annual_rate": 0.016175
+      },
+      {
+        "year": 2017,
+        "cpi": 113.3029,
+        "annual_rate": 0.019668
+      },
+      {
+        "year": 2018,
+        "cpi": 116.7798,
+        "annual_rate": 0.030687
+      },
+      {
+        "year": 2019,
+        "cpi": 114.5247,
+        "annual_rate": -0.019311
+      },
+      {
+        "year": 2020,
+        "cpi": 112.1432,
+        "annual_rate": -0.020795
+      },
+      {
+        "year": 2021,
+        "cpi": 112.345,
+        "annual_rate": 0.001799
+      },
+      {
+        "year": 2022,
+        "cpi": 118.2894,
+        "annual_rate": 0.052912
+      },
+      {
+        "year": 2023,
+        "cpi": 120.2137,
+        "annual_rate": 0.016268
+      },
+      {
+        "year": 2024,
+        "cpi": 122.2133,
+        "annual_rate": 0.016634
+      }
+    ],
+    "EUR": [
+      {
+        "year": 2000,
+        "cpi": 82.5618,
+        "annual_rate": null
+      },
+      {
+        "year": 2001,
+        "cpi": 84.6164,
+        "annual_rate": 0.024886
+      },
+      {
+        "year": 2002,
+        "cpi": 86.3634,
+        "annual_rate": 0.020646
+      },
+      {
+        "year": 2003,
+        "cpi": 88.0181,
+        "annual_rate": 0.01916
+      },
+      {
+        "year": 2004,
+        "cpi": 89.6256,
+        "annual_rate": 0.018263
+      },
+      {
+        "year": 2005,
+        "cpi": 91.2728,
+        "annual_rate": 0.018379
+      },
+      {
+        "year": 2006,
+        "cpi": 93.167,
+        "annual_rate": 0.020753
+      },
+      {
+        "year": 2007,
+        "cpi": 95.1977,
+        "annual_rate": 0.021796
+      },
+      {
+        "year": 2008,
+        "cpi": 98.4182,
+        "annual_rate": 0.03383
+      },
+      {
+        "year": 2009,
+        "cpi": 98.5919,
+        "annual_rate": 0.001765
+      },
+      {
+        "year": 2010,
+        "cpi": 100.0,
+        "annual_rate": 0.014282
+      },
+      {
+        "year": 2011,
+        "cpi": 102.7161,
+        "annual_rate": 0.027161
+      },
+      {
+        "year": 2012,
+        "cpi": 105.2361,
+        "annual_rate": 0.024534
+      },
+      {
+        "year": 2013,
+        "cpi": 106.5999,
+        "annual_rate": 0.012959
+      },
+      {
+        "year": 2014,
+        "cpi": 107.1421,
+        "annual_rate": 0.005086
+      },
+      {
+        "year": 2015,
+        "cpi": 107.1157,
+        "annual_rate": -0.000246
+      },
+      {
+        "year": 2016,
+        "cpi": 107.274,
+        "annual_rate": 0.001478
+      },
+      {
+        "year": 2017,
+        "cpi": 108.6616,
+        "annual_rate": 0.012935
+      },
+      {
+        "year": 2018,
+        "cpi": 110.2848,
+        "annual_rate": 0.014938
+      },
+      {
+        "year": 2019,
+        "cpi": 111.364,
+        "annual_rate": 0.009786
+      },
+      {
+        "year": 2020,
+        "cpi": 111.4648,
+        "annual_rate": 0.000905
+      },
+      {
+        "year": 2021,
+        "cpi": 114.1139,
+        "annual_rate": 0.023766
+      },
+      {
+        "year": 2022,
+        "cpi": 122.2885,
+        "annual_rate": 0.071635
+      },
+      {
+        "year": 2023,
+        "cpi": 128.707,
+        "annual_rate": 0.052487
+      },
+      {
+        "year": 2024,
+        "cpi": 131.1712,
+        "annual_rate": 0.019146
+      }
+    ]
+  }
+}

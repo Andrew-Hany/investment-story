@@ -1,0 +1,639 @@
+{
+  "ticker": "CRH",
+  "yahoo_symbol": "CRH",
+  "source": "SEC EDGAR API + Yahoo Finance",
+  "generated_at": "2026-05-30T12:07:02.595445+00:00",
+  "company": {
+    "symbol": "CRH",
+    "shortName": "CRH PLC",
+    "longName": "CRH plc",
+    "sector": "Basic Materials",
+    "industry": "Building Materials",
+    "country": "Ireland",
+    "currency": "USD",
+    "quoteType": "EQUITY",
+    "exchange": "NYQ",
+    "marketCap": 72693497856,
+    "sharesOutstanding": 668200216,
+    "trailingPE": 20.183674,
+    "forwardPE": 16.271046,
+    "priceToBook": 3.151141,
+    "enterpriseValue": 91356504064,
+    "profitMargins": 0.09645,
+    "grossMargins": 0.36089,
+    "operatingMargins": -0.00041,
+    "returnOnAssets": 0.0605,
+    "returnOnEquity": 0.15812,
+    "totalRevenue": 38060998656,
+    "grossProfits": 13735999488,
+    "ebitda": 7583000064,
+    "totalDebt": 20427999232,
+    "totalCash": 3240000000,
+    "freeCashflow": 786124992
+  },
+  "annual": {
+    "income_statement": [
+      {
+        "period_end": "2025-12-31",
+        "values": {
+          "total_revenue": 37447000000,
+          "operating_revenue": 37447000000,
+          "gross_profit": 13528000000,
+          "operating_income": 5440000000,
+          "net_income": 3753000000,
+          "normalized_income": 3753000000,
+          "pretax_income": 4805000000,
+          "tax_provision": 1041000000,
+          "basic_eps": 5.54,
+          "diluted_eps": 5.51,
+          "basic_average_shares": 673200000,
+          "selling_general_and_administration": 8283000000
+        }
+      },
+      {
+        "period_end": "2024-12-31",
+        "values": {
+          "total_revenue": 35572000000,
+          "operating_revenue": 35572000000,
+          "gross_profit": 12701000000,
+          "operating_income": 4925000000,
+          "net_income": 3492000000,
+          "normalized_income": 3492000000,
+          "pretax_income": 4714000000,
+          "tax_provision": 1085000000,
+          "basic_eps": 5.06,
+          "diluted_eps": 5.02,
+          "basic_average_shares": 683300000,
+          "selling_general_and_administration": 7852000000
+        }
+      },
+      {
+        "period_end": "2023-12-31",
+        "values": {
+          "total_revenue": 34949000000,
+          "operating_revenue": 34949000000,
+          "gross_profit": 11963000000,
+          "operating_income": 4186000000,
+          "net_income": 3178000000,
+          "normalized_income": 3178000000,
+          "pretax_income": 4014000000,
+          "tax_provision": 925000000,
+          "basic_eps": 4.36,
+          "diluted_eps": 4.33,
+          "basic_average_shares": 723900000,
+          "selling_general_and_administration": 7486000000
+        }
+      },
+      {
+        "period_end": "2022-12-31",
+        "values": {
+          "total_revenue": 32723000000,
+          "operating_revenue": 32723000000,
+          "gross_profit": 10815000000,
+          "operating_income": 3809000000,
+          "net_income": 3862000000,
+          "normalized_income": 3862000000,
+          "pretax_income": 3461000000,
+          "tax_provision": 762000000,
+          "basic_eps": 5.15,
+          "diluted_eps": 5.11,
+          "basic_average_shares": 758300000,
+          "selling_general_and_administration": 7056000000
+        }
+      },
+      {
+        "period_end": "2021-12-31",
+        "values": {
+          "total_revenue": 29206000000,
+          "operating_revenue": 29206000000,
+          "gross_profit": 9827000000,
+          "operating_income": 3327000000,
+          "net_income": 2630000000,
+          "normalized_income": 2630000000,
+          "pretax_income": 3102000000,
+          "tax_provision": 650000000,
+          "basic_eps": 3.35,
+          "diluted_eps": 3.32,
+          "basic_average_shares": 780200000,
+          "selling_general_and_administration": 6538000000
+        }
+      }
+    ],
+    "balance_sheet": [
+      {
+        "period_end": "2025-12-31",
+        "values": {
+          "total_assets": 58329000000,
+          "total_liabilities_net_minority_interest": 32851000000,
+          "stockholders_equity": 24004000000,
+          "common_stock_equity": 24004000000,
+          "retained_earnings": 25593000000,
+          "cash_and_cash_equivalents": 4096000000,
+          "long_term_debt": 17533000000,
+          "current_debt": 120000000
+        }
+      },
+      {
+        "period_end": "2024-12-31",
+        "values": {
+          "total_assets": 50613000000,
+          "total_liabilities_net_minority_interest": 27763000000,
+          "stockholders_equity": 21607000000,
+          "common_stock_equity": 21607000000,
+          "retained_earnings": 24036000000,
+          "cash_and_cash_equivalents": 3720000000,
+          "long_term_debt": 13851000000,
+          "current_debt": 117000000
+        }
+      },
+      {
+        "period_end": "2023-12-31",
+        "values": {
+          "total_assets": 47469000000,
+          "total_liabilities_net_minority_interest": 25848000000,
+          "stockholders_equity": 20854000000,
+          "common_stock_equity": 20854000000,
+          "retained_earnings": 22918000000,
+          "cash_and_cash_equivalents": 6341000000,
+          "long_term_debt": 11535000000,
+          "current_debt": 107000000
+        }
+      },
+      {
+        "period_end": "2022-12-31",
+        "values": {
+          "total_assets": 45319000000,
+          "total_liabilities_net_minority_interest": 22279000000,
+          "stockholders_equity": 22157000000,
+          "common_stock_equity": 22157000000,
+          "retained_earnings": 22495000000,
+          "cash_and_cash_equivalents": 5936000000,
+          "long_term_debt": 9542000000,
+          "current_debt": 94000000
+        }
+      },
+      {
+        "period_end": "2021-12-31",
+        "values": {
+          "cash_and_cash_equivalents": 5783000000
+        }
+      }
+    ],
+    "cash_flow": [
+      {
+        "period_end": "2025-12-31",
+        "values": {
+          "operating_cash_flow": 5625000000,
+          "investing_cash_flow": -6045000000,
+          "financing_cash_flow": 596000000,
+          "free_cash_flow": 2912000000,
+          "capital_expenditure": 2713000000,
+          "repurchase_of_capital_stock": 1181000000,
+          "cash_dividends_paid": 34000000
+        }
+      },
+      {
+        "period_end": "2024-12-31",
+        "values": {
+          "operating_cash_flow": 4989000000,
+          "investing_cash_flow": -6291000000,
+          "financing_cash_flow": -1186000000,
+          "free_cash_flow": 2411000000,
+          "capital_expenditure": 2578000000,
+          "repurchase_of_capital_stock": 1482000000,
+          "cash_dividends_paid": 53000000
+        }
+      },
+      {
+        "period_end": "2023-12-31",
+        "values": {
+          "operating_cash_flow": 5017000000,
+          "investing_cash_flow": -2391000000,
+          "financing_cash_flow": -2380000000,
+          "free_cash_flow": 3200000000,
+          "capital_expenditure": 1817000000,
+          "repurchase_of_capital_stock": 3067000000,
+          "cash_dividends_paid": 35000000
+        }
+      },
+      {
+        "period_end": "2022-12-31",
+        "values": {
+          "operating_cash_flow": 3800000000,
+          "investing_cash_flow": -917000000,
+          "financing_cash_flow": -2499000000,
+          "free_cash_flow": 2277000000,
+          "capital_expenditure": 1523000000,
+          "repurchase_of_capital_stock": 1178000000,
+          "cash_dividends_paid": 23000000
+        }
+      },
+      {
+        "period_end": "2021-12-31",
+        "values": {
+          "operating_cash_flow": 3979000000,
+          "investing_cash_flow": -2513000000,
+          "financing_cash_flow": -3107000000,
+          "free_cash_flow": 2425000000,
+          "capital_expenditure": 1554000000,
+          "repurchase_of_capital_stock": 896000000,
+          "cash_dividends_paid": 40000000
+        }
+      }
+    ]
+  },
+  "quarterly": {
+    "income_statement": [
+      {
+        "period_end": "2026-03-31",
+        "values": {
+          "total_revenue": 7370000000,
+          "operating_revenue": 7370000000,
+          "gross_profit": 2045000000,
+          "operating_income": -38000000,
+          "net_income": -176000000,
+          "normalized_income": -176000000,
+          "pretax_income": -224000000,
+          "tax_provision": -55000000,
+          "basic_eps": -0.27,
+          "diluted_eps": -0.27,
+          "basic_average_shares": 668500000,
+          "selling_general_and_administration": 2057000000
+        }
+      },
+      {
+        "period_end": "2025-09-30",
+        "values": {
+          "total_revenue": 11069000000,
+          "operating_revenue": 11069000000,
+          "gross_profit": 4309000000,
+          "operating_income": 2081000000,
+          "net_income": 1503000000,
+          "normalized_income": 1503000000,
+          "pretax_income": 1921000000,
+          "tax_provision": 428000000,
+          "basic_eps": 2.23,
+          "diluted_eps": 2.21,
+          "basic_average_shares": 672300000,
+          "selling_general_and_administration": 2338000000
+        }
+      },
+      {
+        "period_end": "2025-06-30",
+        "values": {
+          "total_revenue": 10206000000,
+          "operating_revenue": 10206000000,
+          "gross_profit": 4026000000,
+          "operating_income": 1935000000,
+          "net_income": 1319000000,
+          "normalized_income": 1319000000,
+          "pretax_income": 1756000000,
+          "tax_provision": 425000000,
+          "basic_eps": 1.95,
+          "diluted_eps": 1.94,
+          "basic_average_shares": 674800000,
+          "selling_general_and_administration": 2120000000
+        }
+      },
+      {
+        "period_end": "2025-03-31",
+        "values": {
+          "total_revenue": 6756000000,
+          "operating_revenue": 6756000000,
+          "gross_profit": 1837000000,
+          "operating_income": 18000000,
+          "net_income": -94000000,
+          "normalized_income": -94000000,
+          "pretax_income": -146000000,
+          "tax_provision": -58000000,
+          "basic_eps": -0.15,
+          "diluted_eps": -0.15,
+          "basic_average_shares": 676700000,
+          "selling_general_and_administration": 1833000000
+        }
+      },
+      {
+        "period_end": "2024-09-30",
+        "values": {
+          "total_revenue": 10515000000,
+          "operating_revenue": 10515000000,
+          "gross_profit": 4059000000,
+          "operating_income": 1964000000,
+          "net_income": 1376000000,
+          "normalized_income": 1376000000,
+          "pretax_income": 1895000000,
+          "tax_provision": 531000000,
+          "basic_eps": 1.99,
+          "diluted_eps": 1.97,
+          "basic_average_shares": 681600000,
+          "selling_general_and_administration": 2184000000
+        }
+      },
+      {
+        "period_end": "2024-06-30",
+        "values": {
+          "total_revenue": 9654000000,
+          "operating_revenue": 9654000000,
+          "gross_profit": 3675000000,
+          "operating_income": 1829000000,
+          "net_income": 1297000000,
+          "normalized_income": 1297000000,
+          "pretax_income": 1733000000,
+          "tax_provision": 430000000,
+          "basic_eps": 1.89,
+          "diluted_eps": 1.88,
+          "basic_average_shares": 685500000,
+          "selling_general_and_administration": 1948000000
+        }
+      },
+      {
+        "period_end": "2024-03-31",
+        "values": {
+          "total_revenue": 6533000000,
+          "operating_revenue": 6533000000,
+          "gross_profit": 1807000000,
+          "operating_income": 28000000,
+          "net_income": 116000000,
+          "normalized_income": 116000000,
+          "pretax_income": 99000000,
+          "tax_provision": -19000000,
+          "basic_eps": 0.16,
+          "diluted_eps": 0.16,
+          "basic_average_shares": 687800000,
+          "selling_general_and_administration": 1787000000
+        }
+      },
+      {
+        "period_end": "2023-09-30",
+        "values": {
+          "total_revenue": 10128000000,
+          "operating_revenue": 10128000000,
+          "gross_profit": 3763000000,
+          "operating_income": 1788000000,
+          "net_income": 1306000000,
+          "normalized_income": 1306000000,
+          "pretax_income": 1720000000,
+          "tax_provision": 416000000,
+          "basic_eps": 1.81,
+          "diluted_eps": 1.8,
+          "basic_average_shares": 718200000,
+          "selling_general_and_administration": 1990000000
+        }
+      },
+      {
+        "period_end": "2023-06-30",
+        "values": {
+          "total_revenue": 9709000000,
+          "operating_revenue": 9709000000,
+          "gross_profit": 3630000000,
+          "operating_income": 1613000000,
+          "net_income": 1199000000,
+          "normalized_income": 1199000000,
+          "pretax_income": 1578000000,
+          "tax_provision": 379000000,
+          "basic_eps": 1.63,
+          "diluted_eps": 1.62,
+          "basic_average_shares": 734700000,
+          "selling_general_and_administration": 2035000000
+        }
+      },
+      {
+        "period_end": "2023-03-31",
+        "values": {
+          "total_revenue": 6427000000,
+          "operating_revenue": 6427000000,
+          "gross_profit": 1619000000,
+          "operating_income": 2000000,
+          "net_income": -28000000,
+          "normalized_income": -28000000,
+          "pretax_income": -39000000,
+          "tax_provision": -14000000,
+          "basic_eps": -0.05,
+          "diluted_eps": -0.05,
+          "basic_average_shares": 742900000,
+          "selling_general_and_administration": 1622000000
+        }
+      }
+    ],
+    "balance_sheet": [
+      {
+        "period_end": "2026-03-31",
+        "values": {
+          "total_assets": 58167000000,
+          "total_liabilities_net_minority_interest": 33622000000,
+          "stockholders_equity": 23071000000,
+          "common_stock_equity": 23071000000,
+          "retained_earnings": 24793000000,
+          "cash_and_cash_equivalents": 3240000000,
+          "long_term_debt": 18438000000,
+          "current_debt": 111000000
+        }
+      },
+      {
+        "period_end": "2025-12-31",
+        "values": {
+          "total_assets": 58329000000,
+          "total_liabilities_net_minority_interest": 32851000000,
+          "stockholders_equity": 24004000000,
+          "common_stock_equity": 24004000000,
+          "retained_earnings": 25593000000,
+          "cash_and_cash_equivalents": 4096000000,
+          "long_term_debt": 17533000000,
+          "current_debt": 120000000
+        }
+      },
+      {
+        "period_end": "2025-09-30",
+        "values": {
+          "total_assets": 58527000000,
+          "total_liabilities_net_minority_interest": 33898000000,
+          "stockholders_equity": 23309000000,
+          "common_stock_equity": 23309000000,
+          "retained_earnings": 25068000000,
+          "cash_and_cash_equivalents": 4198000000,
+          "long_term_debt": 18579000000,
+          "current_debt": 123000000
+        }
+      },
+      {
+        "period_end": "2025-06-30",
+        "values": {
+          "total_assets": 53984000000,
+          "total_liabilities_net_minority_interest": 30354000000,
+          "stockholders_equity": 22345000000,
+          "common_stock_equity": 22345000000,
+          "retained_earnings": 24106000000,
+          "cash_and_cash_equivalents": 2876000000,
+          "long_term_debt": 15706000000,
+          "current_debt": 107000000
+        }
+      },
+      {
+        "period_end": "2025-03-31",
+        "values": {
+          "total_assets": 51921000000,
+          "total_liabilities_net_minority_interest": 29564000000,
+          "stockholders_equity": 21119000000,
+          "common_stock_equity": 21119000000,
+          "retained_earnings": 23375000000,
+          "cash_and_cash_equivalents": 3352000000,
+          "long_term_debt": 15578000000,
+          "current_debt": 93000000
+        }
+      },
+      {
+        "period_end": "2024-12-31",
+        "values": {
+          "total_assets": 50613000000,
+          "total_liabilities_net_minority_interest": 27763000000,
+          "stockholders_equity": 21607000000,
+          "common_stock_equity": 21607000000,
+          "retained_earnings": 24036000000,
+          "cash_and_cash_equivalents": 3720000000,
+          "long_term_debt": 13851000000,
+          "current_debt": 117000000
+        }
+      },
+      {
+        "period_end": "2024-09-30",
+        "values": {
+          "total_assets": 51221000000,
+          "total_liabilities_net_minority_interest": 28055000000,
+          "stockholders_equity": 21875000000,
+          "common_stock_equity": 21875000000,
+          "retained_earnings": 23831000000,
+          "cash_and_cash_equivalents": 2978000000,
+          "long_term_debt": 13737000000,
+          "current_debt": 153000000
+        }
+      },
+      {
+        "period_end": "2024-06-30",
+        "values": {
+          "total_assets": 48105000000,
+          "total_liabilities_net_minority_interest": 26654000000,
+          "stockholders_equity": 20726000000,
+          "common_stock_equity": 20726000000,
+          "retained_earnings": 23030000000,
+          "cash_and_cash_equivalents": 3066000000,
+          "long_term_debt": 12959000000,
+          "current_debt": 159000000
+        }
+      },
+      {
+        "period_end": "2024-03-31",
+        "values": {
+          "total_assets": 46333000000,
+          "total_liabilities_net_minority_interest": 25591000000,
+          "stockholders_equity": 20015000000,
+          "common_stock_equity": 20015000000,
+          "retained_earnings": 22346000000,
+          "cash_and_cash_equivalents": 3308000000,
+          "long_term_debt": 12554000000,
+          "current_debt": 118000000
+        }
+      },
+      {
+        "period_end": "2023-12-31",
+        "values": {
+          "total_assets": 47469000000,
+          "total_liabilities_net_minority_interest": 25848000000,
+          "stockholders_equity": 20854000000,
+          "common_stock_equity": 20854000000,
+          "retained_earnings": 22918000000,
+          "cash_and_cash_equivalents": 6341000000,
+          "long_term_debt": 11535000000,
+          "current_debt": 107000000
+        }
+      },
+      {
+        "period_end": "2023-09-30",
+        "values": {
+          "total_assets": 47631000000,
+          "total_liabilities_net_minority_interest": 24983000000,
+          "stockholders_equity": 21767000000,
+          "common_stock_equity": 21767000000,
+          "retained_earnings": 23936000000,
+          "cash_and_cash_equivalents": 5722000000,
+          "long_term_debt": 11222000000,
+          "current_debt": 173000000
+        }
+      },
+      {
+        "period_end": "2023-06-30",
+        "values": {
+          "total_assets": 46142000000,
+          "total_liabilities_net_minority_interest": 23433000000,
+          "stockholders_equity": 21821000000,
+          "common_stock_equity": 21821000000,
+          "retained_earnings": 22892000000,
+          "cash_and_cash_equivalents": 4275000000,
+          "long_term_debt": 9586000000,
+          "current_debt": 162000000
+        }
+      },
+      {
+        "period_end": "2023-03-31",
+        "values": {
+          "total_assets": 45107000000,
+          "total_liabilities_net_minority_interest": 22963000000,
+          "stockholders_equity": 21255000000,
+          "common_stock_equity": 21255000000,
+          "retained_earnings": 21692000000,
+          "cash_and_cash_equivalents": 4650000000,
+          "long_term_debt": 9678000000,
+          "current_debt": 156000000
+        }
+      }
+    ],
+    "cash_flow": [
+      {
+        "period_end": "2026-03-31",
+        "values": {
+          "operating_cash_flow": -616000000,
+          "investing_cash_flow": -722000000,
+          "financing_cash_flow": 572000000,
+          "free_cash_flow": -616000000,
+          "repurchase_of_capital_stock": 332000000,
+          "cash_dividends_paid": 15000000
+        }
+      },
+      {
+        "period_end": "2025-03-31",
+        "values": {
+          "operating_cash_flow": -659000000,
+          "investing_cash_flow": -964000000,
+          "financing_cash_flow": 1141000000,
+          "free_cash_flow": -1304000000,
+          "capital_expenditure": 645000000,
+          "repurchase_of_capital_stock": 310000000,
+          "cash_dividends_paid": 17000000
+        }
+      },
+      {
+        "period_end": "2024-03-31",
+        "values": {
+          "operating_cash_flow": -712000000,
+          "investing_cash_flow": -2096000000,
+          "financing_cash_flow": -176000000,
+          "free_cash_flow": -1218000000,
+          "capital_expenditure": 506000000,
+          "repurchase_of_capital_stock": 559000000,
+          "cash_dividends_paid": 17000000
+        }
+      },
+      {
+        "period_end": "2023-03-31",
+        "values": {
+          "operating_cash_flow": -671000000,
+          "investing_cash_flow": -492000000,
+          "financing_cash_flow": -191000000,
+          "free_cash_flow": -1003000000,
+          "capital_expenditure": 332000000,
+          "repurchase_of_capital_stock": 246000000,
+          "cash_dividends_paid": 13000000
+        }
+      }
+    ]
+  }
+}
