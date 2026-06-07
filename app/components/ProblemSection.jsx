@@ -67,14 +67,14 @@ export default function ProblemSection() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="max-w-3xl text-left mb-12">
+        <div className="max-w-3xl text-left mb-6 sm:mb-12">
           <span className="text-sm font-semibold tracking-wider text-brand-primary uppercase">
-            The Second Section: Visualizing the journey
+            Visualizing the journey
           </span>
-          <h2 className="mt-2 text-4xl font-extrabold text-slate-900 dark:text-white sm:text-5xl tracking-tight">
+          <h2 className="hidden sm:block mt-2 text-4xl font-extrabold text-slate-900 dark:text-white sm:text-5xl tracking-tight">
             One graph does not explain an investment.
           </h2>
-          <p className="mt-4 text-lg text-slate-600 dark:text-slate-300">
+          <p className="hidden sm:block mt-4 text-lg text-slate-600 dark:text-slate-300">
             A price chart only shows the start and end endpoints. Here is the actual step-by-step story of how your final outcome was built, tracked from a single starting capital.
           </p>
         </div>
@@ -260,7 +260,7 @@ export default function ProblemSection() {
         {/* Narrative Context Box */}
         <div className="bg-indigo-900/5 border border-indigo-200 dark:border-indigo-900/50 rounded-2xl p-6">
           <p className="text-sm text-indigo-900 dark:text-indigo-200 leading-relaxed">
-            <strong>Why did this happen?</strong> Apple's core business grew, the strong USD currency gave Euro investors a huge tailwind boost, and reinvesting dividends added compound weight. However, unlocking this story required holding through a painful <strong>-21.8% maximum drawdown</strong>. Simple price charts hide these drivers!
+            <strong>Why did this happen?</strong> Apple&apos;s core business grew, the strong USD currency gave Euro investors a huge tailwind boost, and reinvesting dividends added compound weight. However, unlocking this story required holding through a painful <strong>-21.8% maximum drawdown</strong>. Simple price charts hide these drivers!
           </p>
         </div>
 
