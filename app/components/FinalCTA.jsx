@@ -25,16 +25,18 @@ export default function FinalCTA() {
         {/* Buttons */}
         <div className="mt-10 flex flex-wrap justify-center gap-4">
           <a
-            href="#explore"
+            href="/investment-story/compare"
             className="inline-flex h-12 items-center justify-center rounded-full bg-brand-primary px-8 text-sm font-semibold text-white shadow-md hover:bg-brand-primary-hover transition-all duration-200"
           >
-            Start Exploring the Story
+            Compare Investments
           </a>
           <a
-            href="mailto:contribute@investmentstory.com"
+            href="https://www.linkedin.com/in/andrewzaki-/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex h-12 items-center justify-center rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 px-8 text-sm font-semibold text-slate-700 dark:text-slate-200 shadow-sm hover:bg-slate-50 dark:hover:bg-slate-700 transition-all duration-200"
           >
-            Contact to Contribute
+            Connect on LinkedIn
           </a>
         </div>
 
