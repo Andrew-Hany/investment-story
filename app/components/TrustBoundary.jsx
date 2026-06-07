@@ -134,22 +134,22 @@ export default function TrustBoundary() {
               <p className="text-xs text-slate-500 font-medium mt-1 leading-normal">{currentCase.subtitle}</p>
 
               {/* Graphical Yield Bars */}
-              <div className="mt-6 sm:mt-8 space-y-5">
+              <div className="mt-5 sm:mt-8 grid grid-cols-2 sm:grid-cols-1 gap-3 sm:gap-5">
 
                 {/* Asset A */}
                 <div className="space-y-1.5">
-                  <div className="flex flex-col gap-1 sm:flex-row sm:justify-between text-xs font-bold font-mono">
+                  <div className="flex flex-col gap-0.5 sm:flex-row sm:justify-between text-[10px] sm:text-xs font-bold font-mono leading-tight">
                     <span className="text-slate-600 dark:text-slate-300">{currentCase.assetA.name}</span>
                     <span className="text-slate-800 dark:text-slate-200">{currentCase.assetA.value} ({currentCase.assetA.yield})</span>
                   </div>
-                  <div className="w-full bg-slate-100 dark:bg-slate-800 h-6 rounded-lg overflow-hidden flex items-center pr-2">
+                  <div className="w-full bg-slate-100 dark:bg-slate-800 h-4 sm:h-6 rounded-lg overflow-hidden flex items-center pr-1 sm:pr-2">
                     <div
                       className="bg-slate-400 h-full rounded-lg transition-all duration-500 ease-out"
                       style={{ width: currentCase.assetA.barWidth }}
                     />
                   </div>
                   {/* Dynamic metrics mapping */}
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-1 sm:gap-2 text-[10px] sm:text-[9px] font-mono text-slate-400 pt-1">
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-0.5 sm:gap-2 text-[8px] sm:text-[9px] font-mono text-slate-400 pt-1 leading-tight">
                     {currentCase.assetA.metrics.map((m, i) => (
                       <span key={i}>{m.label}: {m.val}</span>
                     ))}
@@ -158,18 +158,18 @@ export default function TrustBoundary() {
 
                 {/* Asset B */}
                 <div className="space-y-1.5">
-                  <div className="flex flex-col gap-1 sm:flex-row sm:justify-between text-xs font-bold font-mono">
+                  <div className="flex flex-col gap-0.5 sm:flex-row sm:justify-between text-[10px] sm:text-xs font-bold font-mono leading-tight">
                     <span className="text-slate-900 dark:text-white">{currentCase.assetB.name}</span>
                     <span className="text-brand-secondary">{currentCase.assetB.value} ({currentCase.assetB.yield})</span>
                   </div>
-                  <div className="w-full bg-slate-100 dark:bg-slate-800 h-6 rounded-lg overflow-hidden flex items-center pr-2">
+                  <div className="w-full bg-slate-100 dark:bg-slate-800 h-4 sm:h-6 rounded-lg overflow-hidden flex items-center pr-1 sm:pr-2">
                     <div
                       className="bg-brand-primary h-full rounded-lg transition-all duration-500 ease-out"
                       style={{ width: currentCase.assetB.barWidth }}
                     />
                   </div>
                   {/* Dynamic metrics mapping */}
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-1 sm:gap-2 text-[10px] sm:text-[9px] font-mono text-slate-400 pt-1">
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-0.5 sm:gap-2 text-[8px] sm:text-[9px] font-mono text-slate-400 pt-1 leading-tight">
                     {currentCase.assetB.metrics.map((m, i) => (
                       <span key={i}>{m.label}: {m.val}</span>
                     ))}
