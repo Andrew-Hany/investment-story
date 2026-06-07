@@ -6,6 +6,8 @@ import Hero from "./components/Hero";
 import ProblemSection from "./components/ProblemSection";
 import FeaturesSection from "./components/FeaturesSection";
 import TrustBoundary from "./components/TrustBoundary";
+import DcaCalculatorSection from "./components/DcaCalculatorSection";
+import PortfolioOptimizerSection from "./components/PortfolioOptimizerSection";
 import FinalCTA from "./components/FinalCTA";
 import Footer from "./components/Footer";
 
@@ -28,6 +30,12 @@ export default function Home() {
 
         {/* 5. Trust and Educational Boundary Section */}
         <TrustBoundary />
+
+        {/* DCA Calculator Section */}
+        <DcaCalculatorSection />
+
+        {/* Portfolio Optimizer Section */}
+        <PortfolioOptimizerSection />
 
         {/* 6. Action-driving CTA Section */}
         <FinalCTA />
