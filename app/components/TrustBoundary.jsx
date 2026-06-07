@@ -32,7 +32,9 @@ export default function TrustBoundary() {
         ]
       },
       why: "EUR weakened significantly against the USD. While the underlying stock grew by 82.4%, your real purchasing power increased by 117.5% because your EUR bought more USD value. Currency exchange was the main winner.",
-      lesson: "Never read just the stock price chart. If you invest globally, currency shifts are a major factor that can double your returns or erase them."
+      shortWhy: "EUR weakened, so USD gains converted back into more purchasing power.",
+      lesson: "Never read just the stock price chart. If you invest globally, currency shifts are a major factor that can double your returns or erase them.",
+      shortLesson: "Global returns depend on both asset growth and currency movement."
     },
     gold: {
       title: "Inflation Shield: Gold vs Cash Savings",
@@ -60,7 +62,9 @@ export default function TrustBoundary() {
         ]
       },
       why: "High inflation decreased the real purchasing power of cash savings despite a tiny 2.5% interest rate. Gold had no dividend yields, but the physical asset price grew by 52.3% as capital fled cash, winning the protection duel.",
-      lesson: "Cash is safe from volatility but loses guaranteed purchasing power to inflation. Gold has no cash flow but acts as a physical store of value."
+      shortWhy: "Inflation weakened cash while gold rose as a store of value.",
+      lesson: "Cash is safe from volatility but loses guaranteed purchasing power to inflation. Gold has no cash flow but acts as a physical store of value.",
+      shortLesson: "Cash feels stable, but inflation can quietly reduce real wealth."
     }
   };
 
@@ -180,18 +184,20 @@ export default function TrustBoundary() {
             </div>
 
             {/* Why & Lesson Summary */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 pt-6 border-t border-slate-100 dark:border-slate-800">
-              <div className="p-4 bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-xl text-left">
-                <span className="text-[10px] font-bold text-indigo-600 dark:text-indigo-400 block uppercase font-mono tracking-wider">❓ Why This Happened</span>
-                <p className="text-xs text-slate-600 dark:text-slate-300 dark:text-slate-300 mt-2 leading-relaxed font-medium">
-                  {currentCase.why}
+            <div className="grid grid-cols-2 gap-3 sm:gap-6 pt-5 sm:pt-6 border-t border-slate-100 dark:border-slate-800">
+              <div className="p-3 sm:p-4 bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-xl text-left">
+                <span className="text-[8px] sm:text-[10px] font-bold text-indigo-600 dark:text-indigo-400 block uppercase font-mono tracking-wider">❓ Why This Happened</span>
+                <p className="text-[10px] sm:text-xs text-slate-600 dark:text-slate-300 dark:text-slate-300 mt-2 leading-snug sm:leading-relaxed font-medium">
+                  <span className="sm:hidden">{currentCase.shortWhy}</span>
+                  <span className="hidden sm:inline">{currentCase.why}</span>
                 </p>
               </div>
 
-              <div className="p-4 bg-emerald-50 dark:bg-emerald-900/10 border border-emerald-100 dark:border-emerald-800/30 rounded-xl text-left">
-                <span className="text-[10px] font-bold text-emerald-700 dark:text-emerald-400 block uppercase font-mono tracking-wider">💡 The Key Lesson</span>
-                <p className="text-xs text-emerald-800 dark:text-emerald-300 mt-2 leading-relaxed font-semibold">
-                  {currentCase.lesson}
+              <div className="p-3 sm:p-4 bg-emerald-50 dark:bg-emerald-900/10 border border-emerald-100 dark:border-emerald-800/30 rounded-xl text-left">
+                <span className="text-[8px] sm:text-[10px] font-bold text-emerald-700 dark:text-emerald-400 block uppercase font-mono tracking-wider">💡 The Key Lesson</span>
+                <p className="text-[10px] sm:text-xs text-emerald-800 dark:text-emerald-300 mt-2 leading-snug sm:leading-relaxed font-semibold">
+                  <span className="sm:hidden">{currentCase.shortLesson}</span>
+                  <span className="hidden sm:inline">{currentCase.lesson}</span>
                 </p>
               </div>
             </div>

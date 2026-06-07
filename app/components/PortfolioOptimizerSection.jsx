@@ -171,7 +171,7 @@ export default function PortfolioOptimizerSection() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         
         {/* SECTION HEADER */}
-        <div className="text-center sm:text-left mb-10">
+        <div className="text-left mb-10">
           <span className="text-xs sm:text-sm font-semibold tracking-wider text-brand-primary uppercase font-mono">
             Asset Allocation
           </span>
