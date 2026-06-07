@@ -371,35 +371,35 @@ export default function SummaryStoryArrows({ result, currency, initialAmount }) 
         <span className={`h-3 w-3 rounded ${isWinner ? "bg-brand-primary" : "bg-brand-accent"}`} />
         <h4 className="font-mono font-bold text-slate-800 text-sm">{ticker} Journey Track</h4>
       </div>
-      <div className="flex flex-col lg:flex-row items-center justify-between gap-4 lg:gap-2">
-        <div onMouseEnter={() => setActiveStep({ id: "start", ticker })} onMouseLeave={() => setActiveStep(null)} className="w-full lg:w-[17%] p-4 rounded-xl border border-slate-200 bg-slate-50 hover:scale-[1.03] hover:shadow-sm transition-all duration-200 cursor-pointer">
-          <span className="text-[8px] font-bold text-slate-400 uppercase tracking-wider block font-mono">1. Origin</span>
-          <strong className="text-sm font-extrabold text-slate-800 block font-mono mt-0.5">{getSymbol()}{Math.round(initialAmount).toLocaleString()}</strong>
-          <span className="text-[9px] text-slate-400 block mt-0.5">{currency} Wallet</span>
+      <div className="flex flex-row items-center justify-between gap-1 sm:gap-1.5 py-2 overflow-x-auto scrollbar-none w-full">
+        <div onMouseEnter={() => setActiveStep({ id: "start", ticker })} onMouseLeave={() => setActiveStep(null)} className="flex-1 min-w-[50px] sm:min-w-0 p-1.5 sm:p-4 rounded-lg sm:rounded-xl border border-slate-200 bg-slate-50 hover:scale-[1.03] hover:shadow-sm transition-all duration-200 cursor-pointer text-center sm:text-left">
+          <span className="text-[6px] sm:text-[8px] font-bold text-slate-400 uppercase tracking-wider block font-mono">1. Origin</span>
+          <strong className="text-[9px] sm:text-xs md:text-sm font-extrabold text-slate-800 block font-mono mt-0.5">{getSymbol()}{Math.round(initialAmount).toLocaleString()}</strong>
+          <span className="text-[7px] sm:text-[9px] text-slate-400 block mt-0.5">{currency} Wallet</span>
         </div>
-        <div className="flex flex-col items-center justify-center shrink-0"><span className="text-[8px] font-mono font-bold text-slate-400 uppercase">Buy {assetCurrency}</span><span className="text-slate-300 font-bold text-xl leading-none">➔</span></div>
-        <div onMouseEnter={() => setActiveStep({ id: "price", ticker })} onMouseLeave={() => setActiveStep(null)} className={`w-full lg:w-[18%] p-4 rounded-xl border ${borderClass} ${bgLightClass} hover:scale-[1.03] hover:shadow-sm transition-all duration-200 cursor-pointer`}>
-          <span className="text-[8px] font-bold text-slate-400 uppercase tracking-wider block font-mono">2. Price Action</span>
-          <strong className={`text-sm font-extrabold ${colorClass} block font-mono mt-0.5`}>+{getSymbol()}{Math.round(priceCash).toLocaleString()}</strong>
-          <span className="text-[9px] text-slate-400 block mt-0.5 font-bold">+{pricePct.toFixed(1)}% Growth</span>
+        <div className="flex flex-col items-center justify-center shrink-0 min-w-[30px] sm:min-w-[50px] text-center my-0"><span className="text-[6px] sm:text-[8px] font-mono font-bold text-slate-400 uppercase">Buy {assetCurrency}</span><span className="text-slate-300 font-bold text-xs sm:text-sm leading-none">➔</span></div>
+        <div onMouseEnter={() => setActiveStep({ id: "price", ticker })} onMouseLeave={() => setActiveStep(null)} className={`flex-1 min-w-[50px] sm:min-w-0 p-1.5 sm:p-4 rounded-lg sm:rounded-xl border ${borderClass} ${bgLightClass} hover:scale-[1.03] hover:shadow-sm transition-all duration-200 cursor-pointer text-center sm:text-left`}>
+          <span className="text-[6px] sm:text-[8px] font-bold text-slate-400 uppercase tracking-wider block font-mono">2. Price Action</span>
+          <strong className={`text-[9px] sm:text-xs md:text-sm font-extrabold ${colorClass} block font-mono mt-0.5`}>+{getSymbol()}{Math.round(priceCash).toLocaleString()}</strong>
+          <span className="text-[7px] sm:text-[9px] text-slate-400 block mt-0.5 font-bold">+{pricePct.toFixed(1)}% Growth</span>
         </div>
-        <div className="flex flex-col items-center justify-center shrink-0"><span className="text-[8px] font-mono font-bold text-slate-400 uppercase">FX Layer</span><span className="text-slate-300 font-bold text-xl leading-none">➔</span></div>
-        <div onMouseEnter={() => setActiveStep({ id: "fx", ticker })} onMouseLeave={() => setActiveStep(null)} className={`w-full lg:w-[18%] p-4 rounded-xl border ${isHome ? "border-slate-200 bg-slate-50" : "border-violet-100 bg-violet-50/40"} hover:scale-[1.03] hover:shadow-sm transition-all duration-200 cursor-pointer`}>
-          <span className="text-[8px] font-bold text-slate-400 uppercase tracking-wider block font-mono">3. FX Reality</span>
-          <strong className={`text-sm font-extrabold ${isHome ? "text-slate-700" : "text-violet-900"} block font-mono mt-0.5`}>{isHome ? "—" : `${fxCash >= 0 ? "+" : ""}${getSymbol()}${Math.round(fxCash).toLocaleString()}`}</strong>
-          <span className="text-[9px] text-slate-400 block mt-0.5 font-bold">{isHome ? "No FX Shift" : `${fxPct >= 0 ? "+" : ""}${fxPct.toFixed(1)}% FX Rate`}</span>
+        <div className="flex flex-col items-center justify-center shrink-0 min-w-[30px] sm:min-w-[50px] text-center my-0"><span className="text-[6px] sm:text-[8px] font-mono font-bold text-slate-400 uppercase">FX Layer</span><span className="text-slate-300 font-bold text-xs sm:text-sm leading-none">➔</span></div>
+        <div onMouseEnter={() => setActiveStep({ id: "fx", ticker })} onMouseLeave={() => setActiveStep(null)} className={`flex-1 min-w-[50px] sm:min-w-0 p-1.5 sm:p-4 rounded-lg sm:rounded-xl border ${isHome ? "border-slate-200 bg-slate-50" : "border-violet-100 bg-violet-50/40"} hover:scale-[1.03] hover:shadow-sm transition-all duration-200 cursor-pointer text-center sm:text-left`}>
+          <span className="text-[6px] sm:text-[8px] font-bold text-slate-400 uppercase tracking-wider block font-mono">3. FX Reality</span>
+          <strong className={`text-[9px] sm:text-xs md:text-sm font-extrabold ${isHome ? "text-slate-700" : "text-violet-900"} block font-mono mt-0.5`}>{isHome ? "—" : `${fxCash >= 0 ? "+" : ""}${getSymbol()}${Math.round(fxCash).toLocaleString()}`}</strong>
+          <span className="text-[7px] sm:text-[9px] text-slate-400 block mt-0.5 font-bold">{isHome ? "No FX" : `${fxPct >= 0 ? "+" : ""}${fxPct.toFixed(1)}% Rate`}</span>
         </div>
-        <div className="flex flex-col items-center justify-center shrink-0"><span className="text-[8px] font-mono font-bold text-slate-400 uppercase">Reinvest</span><span className="text-slate-300 font-bold text-xl leading-none">➔</span></div>
-        <div onMouseEnter={() => setActiveStep({ id: "dividends", ticker })} onMouseLeave={() => setActiveStep(null)} className="w-full lg:w-[18%] p-4 rounded-xl border border-emerald-100 bg-emerald-50/40 hover:scale-[1.03] hover:shadow-sm transition-all duration-200 cursor-pointer">
-          <span className="text-[8px] font-bold text-slate-400 uppercase tracking-wider block font-mono">4. Dividends</span>
-          <strong className="text-sm font-extrabold text-emerald-800 block font-mono mt-0.5">+{getSymbol()}{Math.round(divCash).toLocaleString()}</strong>
-          <span className="text-[9px] text-emerald-600 block mt-0.5 font-bold">+{divPct.toFixed(1)}% Compound</span>
+        <div className="flex flex-col items-center justify-center shrink-0 min-w-[30px] sm:min-w-[50px] text-center my-0"><span className="text-[6px] sm:text-[8px] font-mono font-bold text-slate-400 uppercase">Reinvest</span><span className="text-slate-300 font-bold text-xs sm:text-sm leading-none">➔</span></div>
+        <div onMouseEnter={() => setActiveStep({ id: "dividends", ticker })} onMouseLeave={() => setActiveStep(null)} className="flex-1 min-w-[50px] sm:min-w-0 p-1.5 sm:p-4 rounded-lg sm:rounded-xl border border-emerald-100 bg-emerald-50/40 hover:scale-[1.03] hover:shadow-sm transition-all duration-200 cursor-pointer text-center sm:text-left">
+          <span className="text-[6px] sm:text-[8px] font-bold text-slate-400 uppercase tracking-wider block font-mono">4. Dividends</span>
+          <strong className="text-[9px] sm:text-xs md:text-sm font-extrabold text-emerald-800 block font-mono mt-0.5">+{getSymbol()}{Math.round(divCash).toLocaleString()}</strong>
+          <span className="text-[7px] sm:text-[9px] text-emerald-600 block mt-0.5 font-bold">+{divPct.toFixed(1)}% Boost</span>
         </div>
-        <div className="flex flex-col items-center justify-center shrink-0"><span className="text-[8px] font-mono font-bold text-slate-400 uppercase">Cash out</span><span className="text-slate-300 font-bold text-xl leading-none">➔</span></div>
-        <div onMouseEnter={() => setActiveStep({ id: "result", ticker })} onMouseLeave={() => setActiveStep(null)} className={`w-full lg:w-[17%] p-4 rounded-xl border-2 ${isWinner ? "border-brand-primary bg-slate-900 text-white" : "border-slate-800 bg-slate-800 text-slate-200"} hover:scale-[1.03] hover:shadow-sm transition-all duration-200 cursor-pointer`}>
-          <span className="text-[8px] font-bold text-slate-400 uppercase tracking-wider block font-mono">5. Real Return</span>
-          <strong className="text-md font-extrabold block font-mono mt-0.5">{getSymbol()}{Math.round(totalVal).toLocaleString()}</strong>
-          <span className="text-[9px] text-slate-400 block mt-0.5">Realized Payout</span>
+        <div className="flex flex-col items-center justify-center shrink-0 min-w-[30px] sm:min-w-[50px] text-center my-0"><span className="text-[6px] sm:text-[8px] font-mono font-bold text-slate-400 uppercase">Cash out</span><span className="text-slate-300 font-bold text-xs sm:text-sm leading-none">➔</span></div>
+        <div onMouseEnter={() => setActiveStep({ id: "result", ticker })} onMouseLeave={() => setActiveStep(null)} className={`flex-1 min-w-[50px] sm:min-w-0 p-1.5 sm:p-4 rounded-lg sm:rounded-xl border-2 ${isWinner ? "border-brand-primary bg-slate-900 text-white" : "border-slate-800 bg-slate-800 text-slate-200"} hover:scale-[1.03] hover:shadow-sm transition-all duration-200 cursor-pointer text-center sm:text-left`}>
+          <span className="text-[6px] sm:text-[8px] font-bold text-slate-400 uppercase tracking-wider block font-mono">5. Real Return</span>
+          <strong className="text-[10px] sm:text-xs md:text-sm font-extrabold block font-mono mt-0.5">{getSymbol()}{Math.round(totalVal).toLocaleString()}</strong>
+          <span className="text-[7px] sm:text-[9px] text-slate-400 block mt-0.5">Wallet</span>
         </div>
       </div>
     </div>
