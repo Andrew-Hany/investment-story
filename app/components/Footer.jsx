@@ -25,12 +25,11 @@ export default function Footer() {
 
           {/* Links Col */}
           <div className="md:col-span-3 text-left">
-            <h4 className="text-xs font-bold text-slate-200 tracking-wider uppercase mb-4">Core Lab Features</h4>
+            <h4 className="text-xs font-bold text-slate-200 tracking-wider uppercase mb-4">Labs</h4>
             <ul className="space-y-2.5 text-sm">
-              <li><a href="#why-story" className="hover:text-white transition-colors">Driver Separation</a></li>
-              <li><a href="#features" className="hover:text-white transition-colors">Side Comparisons</a></li>
-              <li><a href="#features" className="hover:text-white transition-colors">Portfolio Mix Simulator</a></li>
-              <li><a href="#features" className="hover:text-white transition-colors">Currency Realizer</a></li>
+              <li><a href="/compare" className="hover:text-white transition-colors">Compare Lab</a></li>
+              <li><a href="/monthly" className="hover:text-white transition-colors">DCA Calculator</a></li>
+              <li><a href="/optimizer" className="hover:text-white transition-colors">Portfolio Optimizer</a></li>
             </ul>
           </div>
 
@@ -53,6 +52,18 @@ export default function Footer() {
           </div>
         </div>
 
+      </div>
+
+      <div className="mt-12 border-t border-slate-800 bg-slate-950/40 px-4 py-7 text-center text-sm text-slate-500 sm:px-6 lg:px-8">
+        <span>Designed and developed by </span>
+        <a
+          href="https://www.linkedin.com/in/andrewzaki-/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-semibold text-indigo-400 transition-colors hover:text-brand-accent"
+        >
+          Andrew Zaki
+        </a>
       </div>
     </footer>
   );
