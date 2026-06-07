@@ -67,58 +67,58 @@ export default function TrustBoundary() {
   const currentCase = cases[activeCase];
 
   return (
-    <section id="trust" className="py-24 bg-slate-50 dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800 dark:border-slate-800 grid-pattern-fine text-left">
+    <section id="trust" className="py-10 sm:py-20 lg:py-24 bg-slate-50 dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800 dark:border-slate-800 grid-pattern-fine text-left">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
         {/* Header */}
-        <div className="max-w-3xl mb-12">
-          <span className="text-sm font-semibold tracking-wider text-brand-primary uppercase font-mono">
+        <div className="max-w-3xl mb-6 sm:mb-12">
+          <span className="text-xs sm:text-sm font-semibold tracking-wider text-brand-primary uppercase font-mono">
             Interactive Case Lab
           </span>
-          <h2 className="text-4xl font-extrabold text-slate-900 dark:text-white dark:text-white tracking-tight mt-2">
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white dark:text-white tracking-tight mt-2 leading-tight">
             See how we explain why things happened.
           </h2>
-          <p className="mt-4 text-base text-slate-600 dark:text-slate-300 dark:text-slate-300 leading-relaxed font-medium">
-            Don't just take our word for it. Explore our live interactive comparison studies to see how we break down complex asset classes using real metrics.
+          <p className="mt-3 sm:mt-4 text-sm sm:text-base text-slate-600 dark:text-slate-300 dark:text-slate-300 leading-relaxed font-medium">
+            Don&apos;t just take our word for it. Explore our live interactive comparison studies to see how we break down complex asset classes using real metrics.
           </p>
         </div>
 
         {/* Dynamic Sandbox Container */}
-        <div className="relative rounded-3xl border border-indigo-100 bg-white dark:bg-slate-950 p-8 sm:p-12 shadow-premium overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-12">
+        <div className="relative rounded-2xl sm:rounded-3xl border border-indigo-100 bg-white dark:bg-slate-950 p-4 sm:p-8 lg:p-12 shadow-premium overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-12">
           <div className="absolute top-0 right-0 h-64 w-64 rounded-full bg-indigo-50/40 dark:bg-indigo-900/20 blur-3xl -z-10 animate-pulse" />
 
           {/* Left Column: Interactive Controls (4 cols) */}
-          <div className="lg:col-span-4 flex flex-col justify-between gap-6 border-r border-slate-100 dark:border-slate-800 pr-0 lg:pr-8">
+          <div className="lg:col-span-4 flex flex-col justify-between gap-4 lg:gap-6 border-b lg:border-b-0 lg:border-r border-slate-100 dark:border-slate-800 pb-5 lg:pb-0 pr-0 lg:pr-8">
             <div>
               <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider font-mono">Case Selection</span>
-              <div className="flex flex-col gap-3 mt-4">
+              <div className="grid grid-cols-2 lg:grid-cols-1 gap-2 sm:gap-3 mt-3 sm:mt-4">
                 <button
                   onClick={() => setActiveCase("expat")}
                   onMouseEnter={() => setActiveCase("expat")}
-                  className={`w-full p-4 rounded-xl border text-left transition-all duration-300 ${activeCase === "expat"
-                      ? "scale-[1.02] border-brand-primary bg-indigo-50/30 dark:bg-indigo-900/20 shadow-md"
-                      : "border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 hover:scale-[1.02] hover:shadow-md hover:border-slate-300 dark:hover:border-slate-500"
+                  className={`w-full p-3 sm:p-5 rounded-xl border text-left transition-all duration-300 ${activeCase === "expat"
+                      ? "sm:scale-[1.02] border-brand-primary bg-indigo-50/30 dark:bg-indigo-900/20 shadow-md"
+                      : "border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 sm:hover:scale-[1.02] hover:shadow-md hover:border-slate-300 dark:hover:border-slate-500"
                     }`}
                 >
-                  <span className="text-xs font-bold text-slate-400 block font-mono group-hover:text-slate-300">CASE STUDY 01</span>
-                  <span className="text-sm font-bold text-slate-900 dark:text-white mt-1 block">EUR Expat vs USD Assets</span>
+                  <span className="text-[10px] sm:text-xs font-bold text-slate-400 block font-mono group-hover:text-slate-300">CASE 01</span>
+                  <span className="text-xs sm:text-base font-bold text-slate-900 dark:text-white mt-1 block leading-snug">EUR vs USD</span>
                 </button>
 
                 <button
                   onClick={() => setActiveCase("gold")}
                   onMouseEnter={() => setActiveCase("gold")}
-                  className={`w-full p-4 rounded-xl border text-left transition-all duration-300 ${activeCase === "gold"
-                      ? "scale-[1.02] border-brand-primary bg-indigo-50/30 dark:bg-indigo-900/20 shadow-md"
-                      : "border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 hover:scale-[1.02] hover:shadow-md hover:border-slate-300 dark:hover:border-slate-500"
+                  className={`w-full p-3 sm:p-5 rounded-xl border text-left transition-all duration-300 ${activeCase === "gold"
+                      ? "sm:scale-[1.02] border-brand-primary bg-indigo-50/30 dark:bg-indigo-900/20 shadow-md"
+                      : "border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 sm:hover:scale-[1.02] hover:shadow-md hover:border-slate-300 dark:hover:border-slate-500"
                     }`}
                 >
-                  <span className="text-xs font-bold text-slate-400 block font-mono group-hover:text-slate-300">CASE STUDY 02</span>
-                  <span className="text-sm font-bold text-slate-900 dark:text-white mt-1 block">Gold vs Cash Savings</span>
+                  <span className="text-[10px] sm:text-xs font-bold text-slate-400 block font-mono group-hover:text-slate-300">CASE 02</span>
+                  <span className="text-xs sm:text-base font-bold text-slate-900 dark:text-white mt-1 block leading-snug">Gold vs Cash</span>
                 </button>
               </div>
             </div>
 
-            <div className="p-4 bg-indigo-50 dark:bg-indigo-900/10 rounded-2xl border border-indigo-100/50 dark:border-indigo-800/30">
+            <div className="hidden sm:block p-4 bg-indigo-50 dark:bg-indigo-900/10 rounded-2xl border border-indigo-100/50 dark:border-indigo-800/30">
               <span className="text-xs font-bold text-brand-primary font-mono block">💡 How to Read:</span>
               <p className="text-xs text-brand-primary/80 dark:text-indigo-300/80 mt-1.5 leading-relaxed font-medium">
                 Click a case study option to immediately load its corresponding real driver breakdown and visual yield bars on the right.
@@ -127,18 +127,18 @@ export default function TrustBoundary() {
           </div>
 
           {/* Right Column: High-fidelity Comparison Dashboard (8 cols) */}
-          <div className="lg:col-span-8 flex flex-col justify-between gap-8">
+          <div className="lg:col-span-8 flex flex-col justify-between gap-5 lg:gap-8">
             <div>
               <span className="text-[10px] font-bold text-brand-primary uppercase tracking-wider font-mono">Case Lab Result</span>
-              <h3 className="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white dark:text-white mt-2">{currentCase.title}</h3>
+              <h3 className="text-lg sm:text-2xl font-extrabold text-slate-900 dark:text-white dark:text-white mt-2 leading-tight">{currentCase.title}</h3>
               <p className="text-xs text-slate-500 font-medium mt-1 leading-normal">{currentCase.subtitle}</p>
 
               {/* Graphical Yield Bars */}
-              <div className="mt-8 space-y-5">
+              <div className="mt-6 sm:mt-8 space-y-5">
 
                 {/* Asset A */}
                 <div className="space-y-1.5">
-                  <div className="flex justify-between text-xs font-bold font-mono">
+                  <div className="flex flex-col gap-1 sm:flex-row sm:justify-between text-xs font-bold font-mono">
                     <span className="text-slate-600 dark:text-slate-300">{currentCase.assetA.name}</span>
                     <span className="text-slate-800 dark:text-slate-200">{currentCase.assetA.value} ({currentCase.assetA.yield})</span>
                   </div>
@@ -149,7 +149,7 @@ export default function TrustBoundary() {
                     />
                   </div>
                   {/* Dynamic metrics mapping */}
-                  <div className="grid grid-cols-3 gap-2 text-[9px] font-mono text-slate-400 pt-0.5">
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-1 sm:gap-2 text-[10px] sm:text-[9px] font-mono text-slate-400 pt-1">
                     {currentCase.assetA.metrics.map((m, i) => (
                       <span key={i}>{m.label}: {m.val}</span>
                     ))}
@@ -158,7 +158,7 @@ export default function TrustBoundary() {
 
                 {/* Asset B */}
                 <div className="space-y-1.5">
-                  <div className="flex justify-between text-xs font-bold font-mono">
+                  <div className="flex flex-col gap-1 sm:flex-row sm:justify-between text-xs font-bold font-mono">
                     <span className="text-slate-900 dark:text-white">{currentCase.assetB.name}</span>
                     <span className="text-brand-secondary">{currentCase.assetB.value} ({currentCase.assetB.yield})</span>
                   </div>
@@ -169,7 +169,7 @@ export default function TrustBoundary() {
                     />
                   </div>
                   {/* Dynamic metrics mapping */}
-                  <div className="grid grid-cols-3 gap-2 text-[9px] font-mono text-slate-400 pt-0.5">
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-1 sm:gap-2 text-[10px] sm:text-[9px] font-mono text-slate-400 pt-1">
                     {currentCase.assetB.metrics.map((m, i) => (
                       <span key={i}>{m.label}: {m.val}</span>
                     ))}
@@ -180,7 +180,7 @@ export default function TrustBoundary() {
             </div>
 
             {/* Why & Lesson Summary */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-6 border-t border-slate-100 dark:border-slate-800">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 pt-6 border-t border-slate-100 dark:border-slate-800">
               <div className="p-4 bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-xl text-left">
                 <span className="text-[10px] font-bold text-indigo-600 dark:text-indigo-400 block uppercase font-mono tracking-wider">❓ Why This Happened</span>
                 <p className="text-xs text-slate-600 dark:text-slate-300 dark:text-slate-300 mt-2 leading-relaxed font-medium">
