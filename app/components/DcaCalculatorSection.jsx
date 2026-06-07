@@ -138,18 +138,6 @@ export default function DcaCalculatorSection() {
             Dollar Cost Averaging (DCA) builds consistent wealth. See how monthly staggered deposits perform historically across major asset classes, accounting for exchange rates.
           </p>
 
-          {/* 3 Small Highlight Cards (Phones only) */}
-          <div className="grid grid-cols-3 gap-2 mt-4 sm:hidden">
-            <div className="bg-blue-50 dark:bg-blue-950/30 border border-blue-100/70 dark:border-blue-900/30 rounded-lg p-2 text-center shadow-sm flex flex-col justify-center min-h-10">
-              <span className="text-[9px] font-bold text-blue-700 dark:text-blue-300">Habit</span>
-            </div>
-            <div className="bg-blue-50 dark:bg-blue-950/30 border border-blue-100/70 dark:border-blue-900/30 rounded-lg p-2 text-center shadow-sm flex flex-col justify-center min-h-10">
-              <span className="text-[9px] font-bold text-blue-700 dark:text-blue-300">Lower Risk</span>
-            </div>
-            <div className="bg-blue-50 dark:bg-blue-950/30 border border-blue-100/70 dark:border-blue-900/30 rounded-lg p-2 text-center shadow-sm flex flex-col justify-center min-h-10">
-              <span className="text-[9px] font-bold text-blue-700 dark:text-blue-300">No Stress</span>
-            </div>
-          </div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start">
